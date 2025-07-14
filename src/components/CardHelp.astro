@@ -1,0 +1,47 @@
+---
+import { LucideArrowRight } from "@lucide/astro";
+interface Props {
+  title: string;
+  slug: string;
+}
+
+const { title, slug } = Astro.props;
+
+const numberCard: Record<string, string> = {
+  "business-one": "primary",
+  "r3-by-design": "support-1",
+  "s4-hana": "support-2",
+};
+---
+
+<a
+  href={`/servicios#${slug}`}
+  class="group bg-background-cards hover:bg-background-cards/80 p-8 rounded-lg border border-primary/10 hover:border-primary/30 shadow-lg hover:shadow-primary/20 transition-all duration-500 flex flex-col h-full relative overflow-hidden"
+>
+  <!-- Efecto de brillo en hover -->
+  <div
+    class={`absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 `}
+  >
+  </div>
+
+  <!-- Contenido de la card -->
+  <div class="relative z-10">
+    <h3
+      class={`text-2xl font-family-title font-bold mb-4 group-hover:text-${numberCard[slug]} transition-colors duration-300`}
+    >
+      {title}
+    </h3>
+    <p
+      class="mb-6 text-text/70 group-hover:text-text/90 transition-colors duration-300"
+    >
+      <slot />
+    </p>
+    <div class="mt-auto flex justify-end">
+      <span
+        class={`inline-flex items-center text-${numberCard[slug]} group-hover:translate-x-1 transition-transform duration-300`}
+      >
+        Conocer más <LucideArrowRight class="w-4 h-4 ml-1" />
+      </span>
+    </div>
+  </div>
+</a>

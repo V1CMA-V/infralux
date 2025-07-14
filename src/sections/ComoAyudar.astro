@@ -1,87 +1,29 @@
 ---
-import { LucideArrowRight } from "@lucide/astro";
+import CardHelp from "@/components/CardHelp.astro";
+import TitleSections from "@/components/TitleSections.astro";
 ---
 
 <section class="py-24 px-6 max-w-6xl mx-auto relative">
-  <!-- Blobs de fondo para efecto visual -->
-  <div class="blob-glow w-64 h-64 bg-primary/20 -top-10 right-10 opacity-60"></div>
-  <div class="blob-glow w-72 h-72 bg-support-2/20 bottom-20 left-10 opacity-60"></div>
-  
-  <!-- Contenedor principal -->
-  <div class="flex flex-col items-center text-center mb-16 relative z-10">
-    <!-- Título con animación y línea de gradiente -->
-    <h2 class="text-4xl md:text-5xl font-family-title font-bold mb-4 relative">
-      ¿Cómo te podemos ayudar?
-      <span class="block h-1 w-32 mx-auto mt-4 bg-gradient-to-r from-primary via-support-1 to-support-2 rounded-full animate-pulse"></span>
-    </h2>
-    
-    <!-- Descripción con estilo mejorado -->
-    <p class="text-xl max-w-2xl mx-auto mt-4 text-text/80">
-      Somos un equipo de profesionales con experiencia en soluciones SAP
-      para optimizar los procesos de tu empresa.
-    </p>
-  </div>
-
+  <TitleSections title="¿Cómo te podemos ayudar?">
+    Somos un equipo de profesionales con experiencia en soluciones SAP para
+    optimizar los procesos de tu empresa.
+  </TitleSections>
   <!-- Cards de servicios con diseño elegante -->
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
     <!-- Card 1 -->
-    <a 
-      href="/servicios#business-one" 
-      class="group bg-background-cards hover:bg-background-cards/80 p-8 rounded-lg border border-primary/10 hover:border-primary/30 shadow-lg hover:shadow-primary/20 transition-all duration-500 flex flex-col h-full relative overflow-hidden"
-    >
-      <!-- Efecto de brillo en hover -->
-      <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-      
-      <!-- Contenido de la card -->
-      <div class="relative z-10">
-        <h3 class="text-2xl font-family-title font-bold mb-4 group-hover:text-primary transition-colors duration-300">SAP Business One</h3>
-        <p class="mb-6 text-text/70 group-hover:text-text/90 transition-colors duration-300">Implementación, mantenimiento y soporte técnico para pequeñas y medianas empresas.</p>
-        <div class="mt-auto flex justify-end">
-          <span class="inline-flex items-center text-primary group-hover:translate-x-1 transition-transform duration-300">
-            Conocer más <LucideArrowRight class="w-4 h-4 ml-1" />
-          </span>
-        </div>
-      </div>
-    </a>
-
+    <CardHelp title="SAP Business One" slug="business-one">
+      Implementación, mantenimiento y soporte técnico para pequeñas y medianas
+      empresas.
+    </CardHelp>
     <!-- Card 2 -->
-    <a 
-      href="/servicios#r3-by-design" 
-      class="group bg-background-cards hover:bg-background-cards/80 p-8 rounded-lg border border-primary/10 hover:border-primary/30 shadow-lg hover:shadow-primary/20 transition-all duration-500 flex flex-col h-full relative overflow-hidden"
-    >
-      <!-- Efecto de brillo en hover -->
-      <div class="absolute inset-0 bg-gradient-to-br from-support-1/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-      
-      <!-- Contenido de la card -->
-      <div class="relative z-10">
-        <h3 class="text-2xl font-family-title font-bold mb-4 group-hover:text-support-1 transition-colors duration-300">SAP R/3 by Design</h3>
-        <p class="mb-6 text-text/70 group-hover:text-text/90 transition-colors duration-300">Implementación, mantenimiento y soluciones personalizadas para empresas en crecimiento.</p>
-        <div class="mt-auto flex justify-end">
-          <span class="inline-flex items-center text-support-1 group-hover:translate-x-1 transition-transform duration-300">
-            Conocer más <LucideArrowRight class="w-4 h-4 ml-1" />
-          </span>
-        </div>
-      </div>
-    </a>
-
+    <CardHelp title="SAP R/3 by Design" slug="r3-by-design">
+      Implementación, mantenimiento y soluciones personalizadas para empresas en
+      crecimiento.
+    </CardHelp>
     <!-- Card 3 -->
-    <a 
-      href="/servicios#s4-hana" 
-      class="group bg-background-cards hover:bg-background-cards/80 p-8 rounded-lg border border-primary/10 hover:border-primary/30 shadow-lg hover:shadow-support-2/20 transition-all duration-500 flex flex-col h-full relative overflow-hidden"
-    >
-      <!-- Efecto de brillo en hover -->
-      <div class="absolute inset-0 bg-gradient-to-br from-support-2/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-      
-      <!-- Contenido de la card -->
-      <div class="relative z-10">
-        <h3 class="text-2xl font-family-title font-bold mb-4 group-hover:text-support-2 transition-colors duration-300">SAP S/4 HANA</h3>
-        <p class="mb-6 text-text/70 group-hover:text-text/90 transition-colors duration-300">Implementación, mantenimiento y migración a la plataforma más avanzada de SAP.</p>
-        <div class="mt-auto flex justify-end">
-          <span class="inline-flex items-center text-support-2 group-hover:translate-x-1 transition-transform duration-300">
-            Conocer más <LucideArrowRight class="w-4 h-4 ml-1" />
-          </span>
-        </div>
-      </div>
-    </a>
+    <CardHelp title="SAP S/4 HANA" slug="s4-hana">
+      Implementación, mantenimiento y migración a la plataforma más avanzada de
+      SAP.
+    </CardHelp>
   </div>
 </section>
