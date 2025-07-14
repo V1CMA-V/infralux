@@ -1,0 +1,119 @@
+@import "tailwindcss";
+@plugin "@midudev/tailwind-animations";
+
+@theme {
+  --color-background: #0c0c0c; /* Fondo principal: negro casi absoluto */
+  --color-primary: #2563eb; /* Azul fuerte, resalta sobre fondo oscuro */
+  --color-text: #f1f5f9; /* Texto principal: blanco azulado */
+  --color-secondary: #64748b; /* Secundario: azul grisáceo */
+  --color-support-1: #38bdf8; /* Soporte 1: azul claro, para detalles y hover */
+  --color-support-2: #818cf8; /* Soporte 2: azul violeta, para variedad */
+  --color-background-cards: #18181b; /* Fondo de tarjetas: gris oscuro */
+  --color-emphasis: #f59e42; /* Énfasis/acento: naranja vibrante */
+
+  --font-family-title: "Lora Variable", serif;
+}
+
+html,
+body {
+  /* Utilidad para blobs luminosos de fondo */
+
+  margin: 0;
+  width: 100%;
+  height: 100%;
+
+  @apply bg-background text-text;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  @apply font-family-title;
+}
+
+strong {
+  @apply font-bold text-primary text-pretty;
+}
+
+p {
+  @apply text-text/85 mb-1 font-thin;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+}
+
+@utility clip-video {
+  clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0 75%, 0 0);
+}
+
+@utility blob-glow {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(64px);
+  opacity: 1;
+  z-index: 10;
+  pointer-events: none;
+  mix-blend-mode: lighten;
+  animation: blob-glow 5s infinite;
+}
+
+@keyframes blob-glow {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Texto degradado animado para el header activo */
+.gradient-text-animate {
+  background: linear-gradient(
+    270deg,
+    var(--color-primary),
+    var(--color-support-2),
+    var(--color-emphasis),
+    var(--color-support-1),
+    var(--color-primary)
+  );
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-move 8s linear infinite;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -1,0 +1,70 @@
+---
+import { Phone } from "@lucide/astro";
+---
+
+<section
+  class="fixed top-0 h-screen w-full grid place-content-center gap-4 overflow-hidden"
+>
+  <!-- Blobs luminosos de fondo -->
+  <div class="pointer-events-none select-none">
+    <div
+      class="blob-glow bg-primary/40"
+      style="top:10%; left:20%; width:340px; height:340px;"
+    >
+    </div>
+    <div
+      class="blob-glow bg-support-1/30"
+      style="top:5%; left:70%; width:260px; height:260px;"
+    >
+    </div>
+    <div
+      class="blob-glow bg-emphasis/20"
+      style="top:40%; left:70%; width:180px; height:180px;"
+    >
+    </div>
+  </div>
+
+  <article
+    class="z-10 w-full max-w-6xl mx-auto text-center flex flex-col gap-6 animate-delay-500 animate-blurred-fade-in animate-duration-1000"
+  >
+    <h1 class="text-4xl font-bold">
+      Automatiza y optimiza tu empresa con <strong>SAP</strong>
+    </h1>
+    <p class="text-xl text-text/85 text-pretty w-3/4 mx-auto">
+      En <strong>INFRALUX</strong>, creamos <strong
+        >soluciones innovadoras</strong
+      >
+      para impulsar tu empresa, implementando <strong>SAP</strong> para que puedas
+      <strong>controlar y gestionar</strong> tus procesos empresariales de manera
+      <strong>eficiente y segura</strong>.
+    </p>
+    <a
+      id="cta"
+      href="#"
+      class="flex items-center gap-2 w-fit mx-auto px-6 py-2 text-xl rounded-full border border-primary text-text hover:bg-primary/20 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:scale-105 group"
+      ><Phone class="w-6 h-6 group-hover:rotate-6" /> Solicita tu consulta</a
+    >
+  </article>
+
+  <!-- Video
+  <div class="pointer-events-none select-none z-0 overflow-hidden">
+    <video
+      autoplay
+      loop
+      muted
+      id="video"
+      class="w-full h-full object-cover absolute top-0 left-0 clip-video scale-125"
+    >
+      <source src="/digital_world2.mp4" type="video/mp4" />
+    </video>
+    Video de sombra
+    <video
+      autoplay
+      loop
+      muted
+      class="w-full h-full object-cover absolute mt-32 top-0 left-0 blur-3xl -z-10"
+    >
+      <source src="/digital_world2.mp4" type="video/mp4" />
+    </video>
+  </div> -->
+</section>

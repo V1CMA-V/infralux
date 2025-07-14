@@ -1,0 +1,149 @@
+---
+import { LucideMenu, LucideX } from "@lucide/astro";
+
+const { pathname } = Astro.url;
+
+// Resaltar la clase activa en el menú de navegación
+const isActive = (path: string) => pathname === path;
+---
+
+<header
+  class="fixed top-0 left-0 right-0 z-50 flex justify-center items-center py-8 px-8 w-full max-w-6xl mx-auto"
+>
+  <a
+    href="/"
+    class={`md:hidden font-family-title tracking-widest flex-1 ${isActive("/") ? "font-bold text-2xl gradient-text-animate" : "text-text"}`}
+    >INFRALUX</a
+  >
+  <!-- Desktop Nav -->
+  <nav class="hidden md:flex gap-8 items-center justify-center">
+    <ul class="flex gap-18 text-xl font-thin text-text">
+      <li>
+        <a
+          href="/acerca-de"
+          class={`inline-block hover:text-primary hover:scale-105 transition-all duration-300 ${
+            isActive("/acerca-de") ? "text-primary" : ""
+          }`}>Acerca de</a
+        >
+      </li>
+      <li>
+        <a
+          href="/que-es-sap"
+          class={`inline-block hover:text-primary hover:scale-105 transition-all duration-300 ${
+            isActive("/que-es-sap") ? "text-primary" : ""
+          }`}>Que es SAP?</a
+        >
+      </li>
+      <li>
+        <a
+          href="/"
+          class={`font-family-title tracking-widest flex-1 ${isActive("/") ? "font-bold text-2xl gradient-text-animate" : "text-text"}`}
+          >INFRALUX</a
+        >
+      </li>
+      <li>
+        <a
+          href="/servicios"
+          class={`inline-block hover:text-primary hover:scale-105 transition-all duration-300 ${
+            isActive("/servicios") ? "text-primary" : ""
+          }`}>Servicios</a
+        >
+      </li>
+      <li>
+        <a
+          href="/contacto"
+          class={`inline-block hover:text-primary hover:scale-105 transition-all duration-300 ${
+            isActive("/contacto") ? "text-primary" : ""
+          }`}>Contacto</a
+        >
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Mobile Nav Button -->
+  <button
+    id="mobile-menu-btn"
+    class="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-primary"
+    aria-label="Abrir menú"
+  >
+    <LucideMenu class="w-8 h-8 text-primary" />
+  </button>
+
+  <!-- Mobile Menu Overlay -->
+  <div
+    id="mobile-menu-overlay"
+    class="fixed inset-0 bg-black/70 z-50 flex justify-end transition-opacity duration-300 opacity-0 pointer-events-none"
+  >
+    <nav
+      class="bg-background w-3/4 max-w-xs h-full p-8 flex flex-col gap-8 shadow-xl relative"
+    >
+      <button
+        id="mobile-menu-close"
+        class="absolute top-4 right-4 p-2 rounded focus:outline-none focus:ring-2 focus:ring-primary"
+        aria-label="Cerrar menú"
+      >
+        <LucideX class="w-8 h-8 text-primary" />
+      </button>
+      <ul class="flex flex-col gap-8 text-xl font-thin text-text mt-12">
+        <li>
+          <a
+            href="/acerca-de"
+            class={`inline-block hover:text-primary transition-all duration-300 ${isActive("/acerca-de") ? "text-primary" : ""}`}
+            >Acerca de</a
+          >
+        </li>
+        <li>
+          <a
+            href="/que-es-sap"
+            class={`inline-block hover:text-primary transition-all duration-300 ${isActive("/que-es-sap") ? "text-primary" : ""}`}
+            >Que es SAP?</a
+          >
+        </li>
+        <li>
+          <a
+            href="/servicios"
+            class={`inline-block hover:text-primary transition-all duration-300 ${isActive("/servicios") ? "text-primary" : ""}`}
+            >Servicios</a
+          >
+        </li>
+        <li>
+          <a
+            href="/contacto"
+            class={`inline-block hover:text-primary transition-all duration-300 ${isActive("/contacto") ? "text-primary" : ""}`}
+            >Contacto</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Script para menú mobile -->
+<script>
+  // Espera a que el DOM esté listo
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuBtn = document.getElementById("mobile-menu-btn");
+    const menuOverlay = document.getElementById("mobile-menu-overlay");
+    const closeBtn = document.getElementById("mobile-menu-close");
+
+    function openMenu() {
+      menuOverlay?.classList.remove("opacity-0", "pointer-events-none");
+      menuOverlay?.classList.add("opacity-100");
+      document.body.style.overflow = "hidden";
+    }
+    function closeMenu() {
+      menuOverlay?.classList.add("opacity-0", "pointer-events-none");
+      menuOverlay?.classList.remove("opacity-100");
+      document.body.style.overflow = "";
+    }
+    menuBtn?.addEventListener("click", openMenu);
+    closeBtn?.addEventListener("click", closeMenu);
+    menuOverlay?.addEventListener("click", (e) => {
+      if (e.target === menuOverlay) closeMenu();
+    });
+    // Cerrar menú al navegar
+    menuOverlay?.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+  });
+</script>
