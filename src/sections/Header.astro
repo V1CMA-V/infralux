@@ -12,7 +12,7 @@ const isActive = (path: string) => pathname === path;
 >
   <a
     href="/"
-    class={`md:hidden font-family-title tracking-widest flex-1 ${isActive("/") ? "font-bold text-2xl gradient-text-animate" : "text-text"}`}
+    class={`md:hidden font-family-title tracking-widest ${isActive("/") ? "font-bold text-2xl gradient-text-animate" : "text-text"}`}
     >INFRALUX</a
   >
   <!-- Desktop Nav -->
@@ -37,7 +37,7 @@ const isActive = (path: string) => pathname === path;
       <li>
         <a
           href="/"
-          class={`font-family-title tracking-widest flex-1 ${isActive("/") ? "font-bold text-2xl gradient-text-animate" : "text-text"}`}
+          class={`font-family-title tracking-widest ${isActive("/") ? "font-bold text-2xl gradient-text-animate" : "text-text"}`}
           >INFRALUX</a
         >
       </li>
@@ -117,6 +117,27 @@ const isActive = (path: string) => pathname === path;
     </nav>
   </div>
 </header>
+
+<style>
+  header {
+    background: transparent;
+    animation: header-scroll 0.3s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 250px;
+    border-bottom: 1px solid transparent;
+  }
+  @keyframes header-scroll {
+    from {
+      background: transparent;
+    }
+    to {
+      background: var(--background);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+    }
+  }
+</style>
 
 <!-- Script para menú mobile -->
 <script>
