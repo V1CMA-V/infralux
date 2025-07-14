@@ -1,10 +1,18 @@
 ---
+import Footer from "@/sections/Footer.astro";
 import Header from "@/sections/Header.astro";
-import "./src/styles/global.css";
-
+import "@/styles/global.css";
 import "@fontsource-variable/lora";
 import "@fontsource/poppins";
-import Footer from "@/sections/Footer.astro";
+
+import { ClientRouter } from "astro:transitions";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -14,7 +22,9 @@ import Footer from "@/sections/Footer.astro";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>INFRALUX | Automatiza y optimiza tu empresa con SAP</title>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <ClientRouter />
   </head>
   <body>
     <Header />
