@@ -1,45 +1,58 @@
-# Astro Starter Kit: Basics
+# Infralux
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+Infralux es un sitio web profesional desarrollado con [Astro](https://astro.build/) que presenta los servicios, misión y contacto de la empresa Infralux. El objetivo de este proyecto es ofrecer una presencia moderna, clara y atractiva para clientes potenciales y visitantes.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🌟 Características
+- Diseño responsivo y moderno
+- Secciones: Acerca de, ¿Qué es SAP?, Servicios, Contacto
+- Animaciones y estilos personalizados
+- Navegación optimizada para escritorio y móvil
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+## 📁 Estructura del Proyecto
 
 ```text
 /
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+├── public/           # Archivos públicos y multimedia
+├── src/
+│   ├── assets/       # Imágenes y recursos gráficos
+│   ├── components/   # Componentes reutilizables de UI
+│   ├── layouts/      # Estructuras base de las páginas
+│   ├── pages/        # Páginas principales del sitio
+│   └── sections/     # Secciones como Header, Footer, Hero
+├── package.json      # Dependencias y scripts
+└── README.md         # Este archivo
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🚀 Instalación y Uso
 
-## 🧞 Commands
+1. Clona este repositorio:
+   ```sh
+   git clone https://github.com/V1CMA-V/infralux.git
+   cd infralux
+   ```
+2. Instala las dependencias:
+   ```sh
+   pnpm install
+   ```
+3. Inicia el servidor de desarrollo:
+   ```sh
+   pnpm dev
+   ```
+   El sitio estará disponible en `http://localhost:4321`.
 
-All commands are run from the root of the project, from a terminal:
+4. Para construir la versión de producción:
+   ```sh
+   pnpm build
+   ```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
+## 📬 Contacto
+
+Para más información, sugerencias o contacto profesional, visita la sección de [Contacto](https://github.com/V1CMA-V/infralux) o utiliza el formulario en el sitio.
+
+---
+
+Desarrollado con ❤️ usando Astro.
+
 | `pnpm install`             | Installs dependencies                            |
 | `pnpm dev`             | Starts local dev server at `localhost:4321`      |
 | `pnpm build`           | Build your production site to `./dist/`          |
