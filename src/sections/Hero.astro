@@ -3,10 +3,12 @@ import { Phone } from "@lucide/astro";
 ---
 
 <section
-  class="h-screen w-full grid place-content-center gap-4 overflow-hidden"
+  class="h-screen w-full flex items-center justify-center gap-4 overflow-hidden py-5"
 >
   <!-- Blobs luminosos de fondo -->
-  <div class="pointer-events-none select-none">
+
+  <!-- Blobs para desktop -->
+  <div class="pointer-events-none select-none hidden md:block">
     <div
       class="blob-glow bg-primary/40"
       style="top:10%; left:20%; width:340px; height:340px;"
@@ -24,13 +26,32 @@ import { Phone } from "@lucide/astro";
     </div>
   </div>
 
+  <!-- Blobs para móvil -->
+  <div class="pointer-events-none select-none md:hidden">
+    <div
+      class="blob-glow bg-primary/40"
+      style="top:10%; left:10%; width:200px; height:200px;"
+    >
+    </div>
+    <div
+      class="blob-glow bg-support-1/30"
+      style="top:5%; left:50%; width:160px; height:160px;"
+    >
+    </div>
+    <div
+      class="blob-glow bg-emphasis/20"
+      style="top:60%; left:20%; width:180px; height:180px;"
+    >
+    </div>
+  </div>
+
   <article
     class="z-10 w-full max-w-6xl mx-auto text-center flex flex-col gap-6 animate-delay-500 animate-blurred-fade-in animate-duration-1000"
   >
-    <h1 class="text-4xl font-bold">
+    <h1 class="md:text-4xl text-2xl font-bold">
       Automatiza y optimiza tu empresa con <strong>SAP</strong>
     </h1>
-    <p class="text-xl text-text/85 text-pretty w-3/4 mx-auto">
+    <p class="md:text-xl text-lg text-text/85 text-pretty w-3/4 mx-auto">
       En <strong>INFRALUX</strong>, creamos <strong
         >soluciones innovadoras</strong
       >

@@ -8,7 +8,7 @@ const isActive = (path: string) => pathname === path;
 ---
 
 <header
-  class="fixed top-0 left-0 right-0 z-50 flex justify-center items-center py-8 px-8 w-full max-w-6xl mx-auto"
+  class="fixed top-0 left-0 right-0 z-50 flex justify-between md:justify-center items-center py-8 px-8 w-full max-w-6xl mx-auto"
 >
   <a
     href="/"
@@ -66,58 +66,57 @@ const isActive = (path: string) => pathname === path;
     class="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-primary"
     aria-label="Abrir menú"
   >
-    <LucideMenu class="w-8 h-8 text-primary" />
+    <LucideMenu class="w-6 h-6 text-primary" />
   </button>
-
-  <!-- Mobile Menu Overlay -->
-  <div
-    id="mobile-menu-overlay"
-    class="fixed inset-0 bg-black/70 z-50 flex justify-end transition-opacity duration-300 opacity-0 pointer-events-none"
-  >
-    <nav
-      class="bg-background w-3/4 max-w-xs h-full p-8 flex flex-col gap-8 shadow-xl relative"
-    >
-      <button
-        id="mobile-menu-close"
-        class="absolute top-4 right-4 p-2 rounded focus:outline-none focus:ring-2 focus:ring-primary"
-        aria-label="Cerrar menú"
-      >
-        <LucideX class="w-8 h-8 text-primary" />
-      </button>
-      <ul class="flex flex-col gap-8 text-xl font-thin text-text mt-12">
-        <li>
-          <a
-            href="/acerca-de"
-            class={`inline-block hover:text-primary transition-all duration-300 ${isActive("/acerca-de") ? "text-primary" : ""}`}
-            >Acerca de</a
-          >
-        </li>
-        <li>
-          <a
-            href="/que-es-sap"
-            class={`inline-block hover:text-primary transition-all duration-300 ${isActive("/que-es-sap") ? "text-primary" : ""}`}
-            >Que es SAP?</a
-          >
-        </li>
-        <li>
-          <a
-            href="/servicios"
-            class={`inline-block hover:text-primary transition-all duration-300 ${isActive("/servicios") ? "text-primary" : ""}`}
-            >Servicios</a
-          >
-        </li>
-        <li>
-          <a
-            href="/contacto"
-            class={`inline-block hover:text-primary transition-all duration-300 ${isActive("/contacto") ? "text-primary" : ""}`}
-            >Contacto</a
-          >
-        </li>
-      </ul>
-    </nav>
-  </div>
 </header>
 
+<!-- Mobile Menu Overlay -->
+<div
+  id="mobile-menu-overlay"
+  class="fixed inset-0 bg-black/70 z-[100] flex justify-end transition-opacity duration-300 opacity-0 pointer-events-none"
+>
+  <nav
+    class="bg-background w-3/4 max-w-xs h-full p-8 flex flex-col gap-8 shadow-xl relative"
+  >
+    <button
+      id="mobile-menu-close"
+      class="absolute top-4 right-4 p-2 rounded focus:outline-none focus:ring-2 focus:ring-primary"
+      aria-label="Cerrar menú"
+    >
+      <LucideX class="w-8 h-8 text-primary" />
+    </button>
+    <ul class="flex flex-col gap-8 text-xl font-thin text-text mt-12">
+      <li>
+        <a
+          href="/acerca-de"
+          class={`inline-block hover:text-primary transition-all duration-300 ${isActive("/acerca-de") ? "text-primary" : ""}`}
+          >Acerca de</a
+        >
+      </li>
+      <li>
+        <a
+          href="/que-es-sap"
+          class={`inline-block hover:text-primary transition-all duration-300 ${isActive("/que-es-sap") ? "text-primary" : ""}`}
+          >Que es SAP?</a
+        >
+      </li>
+      <li>
+        <a
+          href="/servicios"
+          class={`inline-block hover:text-primary transition-all duration-300 ${isActive("/servicios") ? "text-primary" : ""}`}
+          >Servicios</a
+        >
+      </li>
+      <li>
+        <a
+          href="/contacto"
+          class={`inline-block hover:text-primary transition-all duration-300 ${isActive("/contacto") ? "text-primary" : ""}`}
+          >Contacto</a
+        >
+      </li>
+    </ul>
+  </nav>
+</div>
 <style>
   header {
     background: transparent;
@@ -140,7 +139,7 @@ const isActive = (path: string) => pathname === path;
 </style>
 
 <!-- Script para menú mobile -->
-<script>
+<script lang="ts" is:inline>
   // Espera a que el DOM esté listo
   document.addEventListener("DOMContentLoaded", () => {
     const menuBtn = document.getElementById("mobile-menu-btn");
