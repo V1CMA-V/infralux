@@ -1,0 +1,209 @@
+---
+import TitleSections from "@/components/TitleSections.astro";
+import {
+  LucideEye,
+  LucideGlobe,
+  LucideLink,
+  LucideShieldCheck,
+  LucideTrendingUp,
+  LucideZap,
+} from "@lucide/astro";
+---
+
+<section class="py-20 px-4">
+  <TitleSections title="¿Qué es SAP?">
+    SAP Business One es un software de gestión empresarial que permite a las
+    empresas gestionar sus operaciones diarias de manera eficiente y eficaz.
+  </TitleSections>
+
+  <div class="relative mt-16 mb-12 text-center">
+    <h3
+      class="text-3xl font-extrabold text-center md:text-4xl bg-gradient-to-r from-primary to-support-2 bg-clip-text text-transparent"
+    >
+      Beneficios clave de SAP Business One
+    </h3>
+    <div
+      class="mt-4 w-24 h-1 bg-gradient-to-r from-primary to-support-2 mx-auto rounded-full"
+    >
+    </div>
+  </div>
+
+  <ul class="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3 w-3/4 mx-auto">
+    <li
+      class="flex items-center gap-3 hover:scale-105 hover:text-support-2 transition-all duration-300"
+    >
+      <LucideLink class="w-6 h-6 text-primary flex-shrink-0" />
+      <span>Integrar todos los procesos de tu empresa</span>
+    </li>
+    <li
+      class="flex items-center gap-3 hover:scale-105 hover:text-support-2 transition-all duration-300"
+    >
+      <LucideEye class="w-6 h-6 text-primary flex-shrink-0" />
+      <span>Visibilidad completa en tiempo real</span>
+    </li>
+    <li
+      class="flex items-center gap-3 hover:scale-105 hover:text-support-2 transition-all duration-300"
+    >
+      <LucideZap class="w-6 h-6 text-primary flex-shrink-0" />
+      <span>Automatizar procesos críticos</span>
+    </li>
+    <li
+      class="flex items-center gap-3 hover:scale-105 hover:text-support-2 transition-all duration-300"
+    >
+      <LucideTrendingUp class="w-6 h-6 text-primary flex-shrink-0" />
+      <span>Escalar y adaptarse al crecimiento</span>
+    </li>
+    <li
+      class="flex items-center gap-3 hover:scale-105 hover:text-support-2 transition-all duration-300"
+    >
+      <LucideShieldCheck class="w-6 h-6 text-primary flex-shrink-0" />
+      <span>Cumplir con regulaciones y estándares</span>
+    </li>
+    <li
+      class="flex items-center gap-3 hover:scale-105 hover:text-support-2 transition-all duration-300"
+    >
+      <LucideGlobe class="w-6 h-6 text-primary flex-shrink-0" />
+      <span>Respaldo de una red global</span>
+    </li>
+  </ul>
+
+  <p
+    class="text-center mt-10 border border-support-2 p-4 rounded-lg w-full mx-auto max-w-5xl"
+  >
+    SAP no solo proporciona software; ofrece una base sólida para lograr una
+    gestión empresarial moderna, conectada y preparada para el futuro.
+  </p>
+
+  <div class="relative mt-24 mb-12 text-center">
+    <h3
+      class="text-3xl font-extrabold text-center md:text-4xl bg-gradient-to-r from-emphasis to-support-2 bg-clip-text text-transparent"
+    >
+      Elige la solución SAP ideal para tu empresa
+    </h3>
+    <div
+      class="mt-4 w-24 h-1 bg-gradient-to-r from-emphasis to-support-2 mx-auto rounded-full"
+    >
+    </div>
+  </div>
+
+  <div
+    class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3 w-full mx-auto max-w-7xl px-4"
+  >
+    <!-- Card SAP Business One -->
+    <article
+      class="group relative bg-gradient-to-br from-black/20 to-black/40 backdrop-blur rounded-xl p-8 shadow-lg flex flex-col gap-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-white/5 overflow-hidden"
+    >
+      <div
+        class="absolute -right-10 -top-10 w-32 h-32 bg-emphasis/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+      >
+      </div>
+      <div
+        class="bg-emphasis/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4"
+      >
+        <LucideTrendingUp class="w-6 h-6 text-emphasis" />
+      </div>
+      <header class="space-y-2">
+        <h4
+          class="text-2xl font-bold bg-gradient-to-r from-emphasis to-emphasis/80 bg-clip-text text-transparent"
+        >
+          SAP Business One
+        </h4>
+        <p class="text-sm text-text/80 font-medium">
+          ERP completo para pequeñas y medianas empresas.
+        </p>
+      </header>
+      <p class="text-text/90 text-sm leading-relaxed flex-1">
+        Centraliza finanzas, ventas, inventario y operaciones en una sola
+        plataforma para impulsar el crecimiento.
+      </p>
+      <a
+        href="/sap-business-one"
+        class="inline-flex items-center gap-2 mt-4 text-emphasis font-semibold text-sm group-hover:gap-3 transition-all duration-300 hover:opacity-90"
+      >
+        Saber más
+        <span
+          class="inline-block group-hover:translate-x-1 transition-transform"
+          >→</span
+        >
+      </a>
+    </article>
+
+    <!-- Card SAP S/4HANA -->
+    <article
+      class="group relative bg-gradient-to-br from-black/20 to-black/40 backdrop-blur rounded-xl p-8 shadow-lg flex flex-col gap-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-white/5 overflow-hidden"
+    >
+      <div
+        class="absolute -right-10 -top-10 w-32 h-32 bg-support-2/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+      >
+      </div>
+      <div
+        class="bg-support-2/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4"
+      >
+        <LucideZap class="w-6 h-6 text-support-2" />
+      </div>
+      <header class="space-y-2">
+        <h4
+          class="text-2xl font-bold bg-gradient-to-r from-support-2 to-support-2/80 bg-clip-text text-transparent"
+        >
+          SAP S/4HANA
+        </h4>
+        <p class="text-sm text-text/80 font-medium">
+          Suite de próxima generación para grandes organizaciones.
+        </p>
+      </header>
+      <p class="text-text/90 text-sm leading-relaxed flex-1">
+        Plataforma en memoria que integra procesos complejos en tiempo real y
+        favorece la innovación digital.
+      </p>
+      <a
+        href="/sap-s4hana"
+        class="inline-flex items-center gap-2 mt-4 text-support-2 font-semibold text-sm group-hover:gap-3 transition-all duration-300 hover:opacity-90"
+      >
+        Saber más
+        <span
+          class="inline-block group-hover:translate-x-1 transition-transform"
+          >→</span
+        >
+      </a>
+    </article>
+
+    <!-- Card SAP SuccessFactors -->
+    <article
+      class="group relative bg-gradient-to-br from-black/20 to-black/40 backdrop-blur rounded-xl p-8 shadow-lg flex flex-col gap-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-white/5 overflow-hidden"
+    >
+      <div
+        class="absolute -right-10 -top-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+      >
+      </div>
+      <div
+        class="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4"
+      >
+        <LucideGlobe class="w-6 h-6 text-primary" />
+      </div>
+      <header class="space-y-2">
+        <h4
+          class="text-2xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent"
+        >
+          SAP SuccessFactors
+        </h4>
+        <p class="text-sm text-text/80 font-medium">
+          Gestión integral del capital humano en la nube.
+        </p>
+      </header>
+      <p class="text-text/90 text-sm leading-relaxed flex-1">
+        Atrae, desarrolla y retén talento con herramientas HXM centradas en la
+        experiencia del empleado.
+      </p>
+      <a
+        href="/sap-successfactors"
+        class="inline-flex items-center gap-2 mt-4 text-primary font-semibold text-sm group-hover:gap-3 transition-all duration-300 hover:opacity-90"
+      >
+        Saber más
+        <span
+          class="inline-block group-hover:translate-x-1 transition-transform"
+          >→</span
+        >
+      </a>
+    </article>
+  </div>
+</section>
