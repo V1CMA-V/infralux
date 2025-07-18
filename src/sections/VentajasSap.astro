@@ -1,0 +1,196 @@
+---
+import TitleSections from "@/components/TitleSections.astro";
+import {
+  LucideCheck,
+  LucideClock,
+  LucideLineChart,
+  LucideShield,
+  LucideUsers,
+} from "@lucide/astro";
+---
+
+<section
+  class="w-full py-24 bg-gradient-to-br from-background via-background-cards/30 to-background"
+>
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Encabezado de sección con título y descripción -->
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <TitleSections title="Ventajas de SAP" />
+      <p class="text-lg md:text-xl text-text/90 mt-4">
+        Descubre por qué las empresas líderes confían en nuestros servicios de
+        implementación y consultoría SAP para transformar su negocio.
+      </p>
+    </div>
+
+    <!-- Contenedor principal con dos columnas -->
+    <div class="flex flex-col lg:flex-row gap-12 items-center">
+      <!-- Columna izquierda: Imagen y testimonial -->
+      <div class="w-full lg:w-1/2 relative">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+          <!-- Imagen principal -->
+          <img
+            src="https://images.unsplash.com/photo-1664575599736-c5197c684128"
+            alt="Profesionales trabajando con SAP"
+            class="w-full h-auto object-cover rounded-3xl"
+          />
+          <!-- Overlay con gradiente -->
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
+          >
+          </div>
+
+          <!-- Testimonial superpuesto -->
+          <div class="absolute bottom-0 left-0 right-0 p-8">
+            <blockquote class="text-white">
+              <p class="text-lg italic mb-4">
+                "La implementación de SAP transformó completamente nuestra
+                operación, aumentando nuestra eficiencia en un 40% y reduciendo
+                costos operativos."
+              </p>
+              <footer class="flex items-center gap-3">
+                <div
+                  class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center"
+                >
+                  <span class="text-white font-bold text-xl">JD</span>
+                </div>
+                <div>
+                  <p class="font-semibold text-white">Juan Domínguez</p>
+                  <p class="text-white/80 text-sm">
+                    Director de Operaciones, Empresa Líder
+                  </p>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+
+        <!-- Badge flotante -->
+        <div
+          class="absolute -top-6 -right-6 bg-primary text-white rounded-full py-3 px-6 shadow-lg transform rotate-3 font-semibold"
+        >
+          <span class="text-sm">Certificados oficiales</span>
+        </div>
+      </div>
+
+      <!-- Columna derecha: Lista de ventajas -->
+      <div class="w-full lg:w-1/2 space-y-6">
+        <h3 class="text-2xl font-bold text-primary mb-6">
+          ¿Por qué elegir nuestros servicios SAP?
+        </h3>
+
+        <!-- Ventaja 1 -->
+        <div class="flex gap-4 items-start group">
+          <div
+            class="p-3 rounded-2xl bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300"
+          >
+            <LucideShield class="w-6 h-6 text-primary" />
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold text-primary mb-2">
+              Experiencia certificada
+            </h4>
+            <p class="text-text/80">
+              Nuestro equipo cuenta con más de 10 años de experiencia y todas
+              las certificaciones oficiales de SAP para garantizar
+              implementaciones exitosas.
+            </p>
+          </div>
+        </div>
+
+        <!-- Ventaja 2 -->
+        <div class="flex gap-4 items-start group">
+          <div
+            class="p-3 rounded-2xl bg-secondary/10 group-hover:bg-secondary/20 transition-colors duration-300"
+          >
+            <LucideClock class="w-6 h-6 text-secondary" />
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold text-secondary mb-2">
+              Implementación rápida
+            </h4>
+            <p class="text-text/80">
+              Metodología ágil que reduce hasta un 30% el tiempo de
+              implementación comparado con métodos tradicionales, minimizando la
+              interrupción de tu negocio.
+            </p>
+          </div>
+        </div>
+
+        <!-- Ventaja 3 -->
+        <div class="flex gap-4 items-start group">
+          <div
+            class="p-3 rounded-2xl bg-text/10 group-hover:bg-text/20 transition-colors duration-300"
+          >
+            <LucideUsers class="w-6 h-6 text-text" />
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold text-text mb-2">
+              Soporte personalizado
+            </h4>
+            <p class="text-text/80">
+              Acompañamiento continuo durante y después de la implementación,
+              con tiempos de respuesta garantizados y atención personalizada.
+            </p>
+          </div>
+        </div>
+
+        <!-- Ventaja 4 -->
+        <div class="flex gap-4 items-start group">
+          <div
+            class="p-3 rounded-2xl bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300"
+          >
+            <LucideLineChart class="w-6 h-6 text-primary" />
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold text-primary mb-2">
+              ROI garantizado
+            </h4>
+            <p class="text-text/80">
+              Nuestros clientes experimentan un retorno de inversión promedio
+              del 200% en los primeros 18 meses tras la implementación.
+            </p>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-10">
+          <a
+            href="#contacto"
+            class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-medium py-3 px-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-primary/20"
+          >
+            Solicitar consultoría gratuita
+            <LucideCheck class="w-5 h-5" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Estadísticas en la parte inferior -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 text-center">
+      <div
+        class="p-6 rounded-2xl bg-background-cards/50 border border-primary/10 hover:border-primary/30 transition-all duration-300"
+      >
+        <p class="text-4xl font-bold text-primary mb-2">98%</p>
+        <p class="text-sm text-text/70">Tasa de satisfacción de clientes</p>
+      </div>
+      <div
+        class="p-6 rounded-2xl bg-background-cards/50 border border-primary/10 hover:border-primary/30 transition-all duration-300"
+      >
+        <p class="text-4xl font-bold text-primary mb-2">+200</p>
+        <p class="text-sm text-text/70">Proyectos implementados</p>
+      </div>
+      <div
+        class="p-6 rounded-2xl bg-background-cards/50 border border-primary/10 hover:border-primary/30 transition-all duration-300"
+      >
+        <p class="text-4xl font-bold text-primary mb-2">-40%</p>
+        <p class="text-sm text-text/70">Reducción de costos operativos</p>
+      </div>
+      <div
+        class="p-6 rounded-2xl bg-background-cards/50 border border-primary/10 hover:border-primary/30 transition-all duration-300"
+      >
+        <p class="text-4xl font-bold text-primary mb-2">+35%</p>
+        <p class="text-sm text-text/70">Aumento en productividad</p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,51 @@
+---
+import { LucideArrowRight } from "@lucide/astro";
+---
+
+<section
+  class="relative h-screen w-full flex items-center justify-center overflow-hidden py-5 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat animate-fade-in duration-200"
+>
+  <!-- Overlay: degradado oscuro+color para mayor contraste -->
+  <div
+    class="absolute inset-0 bg-gradient-to-br from-black/70 via-primary/40 to-black/60 z-0"
+  >
+  </div>
+  <!-- Hero Content -->
+  <div
+    class="flex flex-col gap-6 w-full max-w-2xl mx-auto items-center justify-center relative z-10"
+  >
+    <h1
+      class="text-5xl md:text-6xl font-extrabold tracking-widest text-center leading-tight drop-shadow-xl"
+    >
+      <span class="text-primary">Optimiza</span>, <span class="text-secondary"
+        >Gestiona</span
+      >
+      <span class="hidden md:inline">e</span>
+      <span class="text-accent">Impulsa</span> tu Empresa con
+      <span class="text-white">SAP</span>
+    </h1>
+    <p class="text-lg md:text-xl text-text/90 text-balance text-center">
+      Descubre cómo las soluciones <span class="font-semibold text-primary"
+        >SAP</span
+      > pueden transformar la gestión y automatización de tu negocio, simplificando
+      procesos y maximizando resultados.
+    </p>
+    <a
+      href="/contacto"
+      class="inline-flex items-center gap-2 border-2 border-primary bg-primary/80 hover:bg-primary text-white px-3 py-2 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105"
+    >
+      <LucideArrowRight class="w-6 h-6" />
+      Solicita una asesoría
+    </a>
+    <div class="mt-4 flex flex-col items-center">
+      <span
+        class="text-xs uppercase tracking-widest text-primary/80 font-semibold bg-white/70 px-3 py-1 rounded-lg mb-1"
+        >Más de 25 empresas confían en nosotros</span
+      >
+      <span class="text-sm text-white/90 italic"
+        >"El cambio a SAP con Infralux fue un antes y después para nuestro
+        negocio."</span
+      >
+    </div>
+  </div>
+</section>

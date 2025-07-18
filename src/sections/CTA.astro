@@ -1,0 +1,271 @@
+---
+import {
+  LucideArrowRight,
+  LucideMail,
+  LucideMessageCircle,
+  LucidePhone,
+} from "@lucide/astro";
+---
+
+<section class="w-full py-24 relative" id="contacto">
+  <!-- Fondo con gradiente y overlay -->
+  <div
+    class="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10 z-0"
+  >
+  </div>
+
+  <!-- Patrón de puntos decorativo -->
+  <div
+    class="absolute inset-0 bg-[radial-gradient(circle,_var(--tw-gradient-stops))] from-primary/5 to-transparent [mask-image:repeating-linear-gradient(45deg,_#000_0px,_#000_1px,_transparent_1px,_transparent_10px)] opacity-70 z-0"
+  >
+  </div>
+
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+    <!-- Contenedor principal -->
+    <div class="bg-background-cards rounded-3xl shadow-2xl overflow-hidden">
+      <div class="flex flex-col lg:flex-row">
+        <!-- Columna izquierda: Información de contacto -->
+        <div class="w-full lg:w-1/3 bg-primary p-8 lg:p-12 text-white">
+          <h3 class="text-2xl font-bold mb-6">Contacta con nosotros</h3>
+
+          <p class="mb-8 text-white/90">
+            Estamos listos para ayudarte a transformar tu negocio con las
+            soluciones SAP más avanzadas del mercado.
+          </p>
+
+          <div class="space-y-6">
+            <!-- Teléfono -->
+            <div class="flex items-center gap-4">
+              <div class="p-3 rounded-full bg-white/10">
+                <LucidePhone class="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <p class="text-sm text-white/70">Llámanos</p>
+                <a href="tel:+525555555555" class="text-white hover:underline"
+                  >+52 55 5555 5555</a
+                >
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-center gap-4">
+              <div class="p-3 rounded-full bg-white/10">
+                <LucideMail class="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <p class="text-sm text-white/70">Escríbenos</p>
+                <a
+                  href="mailto:info@infralux.com"
+                  class="text-white hover:underline">info@infralux.com</a
+                >
+              </div>
+            </div>
+
+            <!-- Chat -->
+            <div class="flex items-center gap-4">
+              <div class="p-3 rounded-full bg-white/10">
+                <LucideMessageCircle class="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <p class="text-sm text-white/70">Chat en vivo</p>
+                <a href="#" class="text-white hover:underline"
+                  >Iniciar conversación</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Horario -->
+          <div class="mt-12 pt-6 border-t border-white/20">
+            <p class="text-sm text-white/70 mb-2">Horario de atención</p>
+            <p class="text-white">Lunes a Viernes: 9:00 - 18:00</p>
+          </div>
+        </div>
+
+        <!-- Columna derecha: Formulario -->
+        <div class="w-full lg:w-2/3 p-8 lg:p-12">
+          <div class="max-w-lg">
+            <h2 class="text-3xl md:text-4xl font-bold mb-3 text-primary">
+              ¿Listo para impulsar tu negocio con SAP?
+            </h2>
+            <p class="text-lg text-text/80 mb-8">
+              Completa el formulario y un consultor especializado te contactará
+              en menos de 24 horas para ofrecerte una asesoría personalizada sin
+              costo.
+            </p>
+
+            <!-- Formulario -->
+            <form class="space-y-6">
+              <!-- Nombre y Empresa en fila -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="nombre"
+                    class="block text-sm font-medium text-text/70 mb-2"
+                    >Nombre completo</label
+                  >
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    class="w-full px-4 py-3 rounded-xl border border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-background"
+                    placeholder="Tu nombre"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    for="empresa"
+                    class="block text-sm font-medium text-text/70 mb-2"
+                    >Empresa</label
+                  >
+                  <input
+                    type="text"
+                    id="empresa"
+                    name="empresa"
+                    class="w-full px-4 py-3 rounded-xl border border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-background"
+                    placeholder="Nombre de tu empresa"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- Email y Teléfono en fila -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-text/70 mb-2"
+                    >Correo electrónico</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="w-full px-4 py-3 rounded-xl border border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-background"
+                    placeholder="tu@email.com"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    for="telefono"
+                    class="block text-sm font-medium text-text/70 mb-2"
+                    >Teléfono</label
+                  >
+                  <input
+                    type="tel"
+                    id="telefono"
+                    name="telefono"
+                    class="w-full px-4 py-3 rounded-xl border border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-background"
+                    placeholder="Tu número de contacto"
+                  />
+                </div>
+              </div>
+
+              <!-- Producto de interés -->
+              <div>
+                <label
+                  for="producto"
+                  class="block text-sm font-medium text-text/70 mb-2"
+                  >Producto de interés</label
+                >
+                <select
+                  id="producto"
+                  name="producto"
+                  class="w-full px-4 py-3 rounded-xl border border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-background"
+                  required
+                >
+                  <option value="" disabled selected
+                    >Selecciona una opción</option
+                  >
+                  <option value="business-one">SAP Business One</option>
+                  <option value="s4hana">SAP S/4HANA</option>
+                  <option value="successfactors">SAP SuccessFactors</option>
+                  <option value="otro">Otro / No estoy seguro</option>
+                </select>
+              </div>
+
+              <!-- Mensaje -->
+              <div>
+                <label
+                  for="mensaje"
+                  class="block text-sm font-medium text-text/70 mb-2"
+                  >Mensaje</label
+                >
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  rows="4"
+                  class="w-full px-4 py-3 rounded-xl border border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-background"
+                  placeholder="Cuéntanos sobre tu proyecto o necesidades"
+                ></textarea>
+              </div>
+
+              <!-- Checkbox de política de privacidad -->
+              <div class="flex items-start">
+                <input
+                  type="checkbox"
+                  id="privacidad"
+                  name="privacidad"
+                  class="mt-1 h-4 w-4 rounded border-primary/30 text-primary focus:ring-primary/20"
+                  required
+                />
+                <label for="privacidad" class="ml-3 text-sm text-text/70">
+                  He leído y acepto la <a
+                    href="/politica-privacidad"
+                    class="text-primary hover:underline"
+                    >política de privacidad</a
+                  >
+                </label>
+              </div>
+
+              <!-- Botón de envío -->
+              <div>
+                <button
+                  type="submit"
+                  class="w-full md:w-auto px-8 py-3 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl transition-all duration-300 shadow-lg hover:shadow-primary/20 flex items-center justify-center gap-2 group"
+                >
+                  Solicitar asesoría gratuita
+                  <LucideArrowRight
+                    class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
+                  />
+                </button>
+              </div>
+            </form>
+
+            <!-- Mensaje de confianza -->
+            <p class="mt-6 text-sm text-text/60 flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 text-primary"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                ></path>
+              </svg>
+              Tu información está segura y nunca será compartida con terceros.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sello de garantía -->
+    <div class="mt-16 text-center flex justify-center items-center">
+      <div
+        class="inline-block rounded-full border border-primary/20 bg-background-cards px-6 py-3 shadow-lg"
+      >
+        <p class="text-sm font-medium text-primary">
+          Partner oficial certificado por SAP
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -28,9 +28,9 @@ const isActive = (path: string) => pathname === path;
       </li>
       <li>
         <a
-          href="/que-es-sap"
+          href="/sap"
           class={`inline-block hover:text-primary hover:scale-105 transition-all duration-300 ${
-            isActive("/que-es-sap") ? "text-primary" : ""
+            isActive("/sap") ? "text-primary" : ""
           }`}
           >¿Qué es SAP?
         </a>
@@ -38,7 +38,7 @@ const isActive = (path: string) => pathname === path;
       <li>
         <a
           href="/"
-          class={`font-family-title tracking-widest ${isActive("/") ? "font-bold text-2xl gradient-text-animate" : "text-text"}`}
+          class={`font-family-title tracking-widest text-2xl hover:scale-105 transition-transform duration-300 inline-block ${isActive("/") ? "font-bold gradient-text-animate" : ""}`}
           >INFRALUX</a
         >
       </li>
@@ -96,9 +96,9 @@ const isActive = (path: string) => pathname === path;
       </li>
       <li>
         <a
-          href="/que-es-sap"
-          class={`inline-block hover:text-primary transition-all duration-300 ${isActive("/que-es-sap") ? "text-primary" : ""}`}
-          >Que es SAP?</a
+          href="/sap"
+          class={`inline-block hover:text-primary transition-all duration-300 ${isActive("/sap") ? "text-primary" : ""}`}
+          >¿Qué es SAP?</a
         >
       </li>
       <li>
@@ -135,6 +135,8 @@ const isActive = (path: string) => pathname === path;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
       border-bottom: 1px solid rgba(0, 0, 0, 0.3);
       backdrop-filter: blur(10px);
+      border-radius: 80px;
+      margin-top: 15px;
     }
   }
 </style>

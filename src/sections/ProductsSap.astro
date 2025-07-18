@@ -1,0 +1,284 @@
+---
+import TitleSections from "@/components/TitleSections.astro";
+import {
+  LucideArrowRight,
+  LucideBuilding,
+  LucideDatabase,
+  LucideUsers,
+} from "@lucide/astro";
+---
+
+<section class="w-full py-20 bg-background" id="productos-sap">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Encabezado de sección -->
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <TitleSections title="Nuestros Productos SAP" />
+      <p class="text-lg md:text-xl text-text/90 mt-4">
+        Ofrecemos las soluciones SAP más avanzadas para satisfacer las
+        necesidades específicas de tu empresa, sea cual sea su tamaño o
+        industria.
+      </p>
+    </div>
+
+    <!-- Contenedor de productos -->
+    <div class="space-y-24">
+      <!-- SAP Business One -->
+      <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
+        <!-- Imagen/Visual del producto -->
+        <div class="w-full lg:w-1/2 order-2 lg:order-1">
+          <div class="relative">
+            <!-- Imagen principal -->
+            <div class="rounded-3xl overflow-hidden shadow-xl">
+              <img
+                src="https://www.holonxxi.com/wp-content/uploads/2020/02/sap-business-one-areas.png"
+                alt="SAP Business One - Solución ERP para pequeñas y medianas empresas"
+                class="w-full h-auto object-cover"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+            </div>
+            <!-- Badge flotante -->
+            <div
+              class="absolute -bottom-6 -left-6 bg-primary text-white rounded-full py-2 px-4 shadow-lg font-medium text-sm"
+            >
+              Ideal para PyMEs
+            </div>
+          </div>
+        </div>
+
+        <!-- Información del producto -->
+        <div class="w-full lg:w-1/2 order-1 lg:order-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-3 bg-primary/10 rounded-xl">
+              <LucideBuilding class="w-6 h-6 text-primary" />
+            </div>
+            <h3 class="text-3xl font-bold text-primary">SAP Business One</h3>
+          </div>
+
+          <p class="text-lg text-text/90 mb-6">
+            Solución ERP completa y asequible diseñada específicamente para
+            pequeñas y medianas empresas que buscan optimizar sus operaciones y
+            crecer con confianza.
+          </p>
+
+          <!-- Características principales -->
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start gap-3">
+              <span class="text-primary font-bold text-xl leading-none">•</span>
+              <span class="text-text/80">
+                <strong class="text-primary"
+                  >Gestión financiera integral:</strong
+                > Contabilidad, bancos, impuestos y reportes financieros en tiempo
+                real.
+              </span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-primary font-bold text-xl leading-none">•</span>
+              <span class="text-text/80">
+                <strong class="text-primary"
+                  >Control de inventario y producción:</strong
+                > Optimiza niveles de stock y planifica la producción eficientemente.
+              </span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-primary font-bold text-xl leading-none">•</span>
+              <span class="text-text/80">
+                <strong class="text-primary">CRM integrado:</strong> Gestiona relaciones
+                con clientes y oportunidades de venta en una plataforma unificada.
+              </span>
+            </li>
+          </ul>
+
+          <a
+            href="/sap/business-one"
+            class="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all duration-300"
+          >
+            Conocer más sobre SAP Business One
+            <LucideArrowRight class="w-5 h-5" />
+          </a>
+        </div>
+      </div>
+
+      <!-- SAP S/4HANA -->
+      <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
+        <!-- Información del producto -->
+        <div class="w-full lg:w-1/2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-3 bg-secondary/10 rounded-xl">
+              <LucideDatabase class="w-6 h-6 text-secondary" />
+            </div>
+            <h3 class="text-3xl font-bold text-secondary">SAP S/4HANA</h3>
+          </div>
+
+          <p class="text-lg text-text/90 mb-6">
+            La suite ERP de próxima generación con tecnología in-memory que
+            proporciona capacidades analíticas en tiempo real y una experiencia
+            de usuario simplificada para empresas grandes y corporaciones.
+          </p>
+
+          <!-- Características principales -->
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start gap-3">
+              <span class="text-secondary font-bold text-xl leading-none"
+                >•</span
+              >
+              <span class="text-text/80">
+                <strong class="text-secondary"
+                  >Procesamiento en tiempo real:</strong
+                > Análisis instantáneo de grandes volúmenes de datos para decisiones
+                más rápidas y precisas.
+              </span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-secondary font-bold text-xl leading-none"
+                >•</span
+              >
+              <span class="text-text/80">
+                <strong class="text-secondary"
+                  >Inteligencia artificial integrada:</strong
+                > Automatización inteligente de procesos y predicciones basadas en
+                datos.
+              </span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-secondary font-bold text-xl leading-none"
+                >•</span
+              >
+              <span class="text-text/80">
+                <strong class="text-secondary">Solución integral:</strong> Abarca
+                finanzas, cadena de suministro, manufactura, ventas y más en una
+                plataforma unificada.
+              </span>
+            </li>
+          </ul>
+
+          <a
+            href="/sap/s4hana"
+            class="inline-flex items-center gap-2 text-secondary font-medium hover:gap-3 transition-all duration-300"
+          >
+            Explorar SAP S/4HANA
+            <LucideArrowRight class="w-5 h-5" />
+          </a>
+        </div>
+
+        <!-- Imagen/Visual del producto -->
+        <div class="w-full lg:w-1/2">
+          <div class="relative">
+            <!-- Imagen principal -->
+            <div class="rounded-3xl overflow-hidden shadow-xl">
+              <img
+                src="https://img.directindustry.es/images_di/photo-mg/9333-19720173.jpg"
+                alt="SAP S/4HANA - Suite ERP de próxima generación"
+                class="w-full h-auto object-cover"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+            </div>
+            <!-- Badge flotante -->
+            <div
+              class="absolute -bottom-6 -right-6 bg-secondary text-white rounded-full py-2 px-4 shadow-lg font-medium text-sm"
+            >
+              Para grandes empresas
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAP SuccessFactors -->
+      <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
+        <!-- Imagen/Visual del producto -->
+        <div class="w-full lg:w-1/2 order-2 lg:order-1">
+          <div class="relative">
+            <!-- Imagen principal -->
+            <div class="rounded-3xl overflow-hidden shadow-xl">
+              <img
+                src="https://www.cromacampus.com/public/uploads/Blog/2022/07/week_3/Sap-Sucess-factor-Blog-Image-Large-Size.jpg"
+                alt="SAP SuccessFactors - Gestión de capital humano en la nube"
+                class="w-full h-auto object-cover"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+            </div>
+            <!-- Badge flotante -->
+            <div
+              class="absolute -bottom-6 -left-6 bg-text/50 text-white rounded-full py-2 px-4 shadow-lg font-medium text-sm"
+            >
+              Solución HR Cloud
+            </div>
+          </div>
+        </div>
+
+        <!-- Información del producto -->
+        <div class="w-full lg:w-1/2 order-1 lg:order-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-3 bg-text/10 rounded-xl">
+              <LucideUsers class="w-6 h-6 text-text" />
+            </div>
+            <h3 class="text-3xl font-bold text-text">SAP SuccessFactors</h3>
+          </div>
+
+          <p class="text-lg text-text/90 mb-6">
+            Suite completa de gestión de capital humano basada en la nube que
+            ayuda a las organizaciones a atraer, desarrollar y retener el
+            talento para impulsar resultados empresariales.
+          </p>
+
+          <!-- Características principales -->
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start gap-3">
+              <span class="text-text font-bold text-xl leading-none">•</span>
+              <span class="text-text/80">
+                <strong>Reclutamiento y onboarding:</strong> Atrae y contrata a los
+                mejores talentos con procesos digitales eficientes.
+              </span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-text font-bold text-xl leading-none">•</span>
+              <span class="text-text/80">
+                <strong>Gestión del desempeño:</strong> Establece objetivos, realiza
+                evaluaciones continuas y desarrolla el talento de forma estratégica.
+              </span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-text font-bold text-xl leading-none">•</span>
+              <span class="text-text/80">
+                <strong>Análisis de personal:</strong> Obtén insights basados en
+                datos para tomar mejores decisiones sobre tu capital humano.
+              </span>
+            </li>
+          </ul>
+
+          <a
+            href="/sap/successfactors"
+            class="inline-flex items-center gap-2 text-text font-medium hover:gap-3 transition-all duration-300"
+          >
+            Descubrir SAP SuccessFactors
+            <LucideArrowRight class="w-5 h-5" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA general -->
+    <div
+      class="mt-20 text-center flex flex-col items-center justify-center gap-5"
+    >
+      <p class="text-lg text-text/90 max-w-2xl mx-auto">
+        ¿No estás seguro de qué solución SAP es la adecuada para tu empresa?
+        Nuestros consultores pueden ayudarte a encontrar la opción perfecta.
+      </p>
+      <a
+        href="#contacto"
+        class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-primary/20 group"
+      >
+        Solicitar asesoría personalizada
+        <LucideArrowRight
+          class="w-5 h-5 group-hover:translate-x-2 transition-all duration-300"
+        />
+      </a>
+    </div>
+  </div>
+</section>
