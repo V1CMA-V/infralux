@@ -1,0 +1,125 @@
+---
+import TitleSections from "@/components/TitleSections.astro";
+import {
+  LucideAward,
+  LucideCheckCircle,
+  LucideTarget,
+  LucideTrendingUp,
+  LucideUserCheck,
+} from "@lucide/astro";
+
+interface Reason {
+  title: string;
+  description: string;
+  bullets: string[];
+  icon: any;
+}
+
+const reasons: Reason[] = [
+  {
+    title: "Equipo Especializado",
+    description:
+      "Nuestro equipo está compuesto por consultores certificados SAP con amplia experiencia en diferentes industrias y módulos.",
+    bullets: [
+      "Certificaciones SAP actualizadas",
+      "Experiencia multisectorial",
+      "Formación continua",
+    ],
+    icon: LucideUserCheck,
+  },
+  {
+    title: "Metodología Probada",
+    description:
+      "Aplicamos metodologías ágiles y mejores prácticas de la industria para garantizar el éxito de cada proyecto.",
+    bullets: [
+      "Metodología SAP Activate",
+      "Gestión de proyectos ágil",
+      "Control de calidad riguroso",
+    ],
+    icon: LucideTrendingUp,
+  },
+  {
+    title: "Reconocimientos",
+    description:
+      "Hemos sido reconocidos por SAP y nuestros clientes por la calidad de nuestros servicios y resultados excepcionales.",
+    bullets: [
+      "SAP Gold Partner",
+      "99% satisfacción del cliente",
+      "Certificación ISO 9001",
+    ],
+    icon: LucideAward,
+  },
+  {
+    title: "Enfoque en Resultados",
+    description:
+      "Medimos nuestro éxito por el impacto positivo que generamos en los negocios de nuestros clientes.",
+    bullets: [
+      "ROI medible y comprobable",
+      "Soporte post-implementación",
+      "Mejora continua",
+    ],
+    icon: LucideTarget,
+  },
+];
+---
+
+<section
+  id="por-que-infralux"
+  class="py-24 px-4 md:px-8 lg:px-0 bg-background"
+  aria-label="Razones para elegir INFRALUX"
+>
+<TitleSections title="¿Por Qué Elegir INFRALUX?" >
+  Conjugamos experiencia, metodología y pasión por la excelencia para hacer
+  de cada proyecto SAP un éxito tangible.
+</TitleSections>
+
+  <!-- GRID BENEFICIOS -->
+  <div
+    class="max-w-7xl mx-auto grid gap-12 sm:grid-cols-2 lg:grid-cols-2"
+    role="list"
+  >
+    {reasons.map((reason) => (
+      <article
+        class="flex flex-col gap-4"
+        itemprop="benefits"
+      >
+        <div class="flex items-center gap-3">
+          <reason.icon
+            class="w-6 h-6 text-primary flex-shrink-0"
+            aria-hidden="true"
+          />
+          <h3 class="text-xl font-semibold text-text" itemprop="name">
+            {reason.title}
+          </h3>
+        </div>
+        <p class="text-text/80" itemprop="description">{reason.description}</p>
+        <ul class="space-y-1 mt-2" aria-label={`Ventajas de ${reason.title}`}>
+          {reason.bullets.map((b) => (
+            <li class="flex items-start gap-2" itemprop="value">
+              <LucideCheckCircle
+                class="w-4 h-4 text-green-700 mt-0.5 flex-shrink-0"
+                aria-hidden="true"
+              />
+              <span>{b}</span>
+            </li>
+          ))}
+        </ul>
+      </article>
+    ))}
+  </div>
+
+  <!-- Structured data SEO -->
+  <script type="application/ld+json" is:inline>
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "OfferCatalog",
+      name: "¿Por qué elegir INFRALUX?",
+      itemListElement: reasons.map((r, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: r.title,
+        description: r.description,
+      })),
+    })}
+  </script>
+</section>

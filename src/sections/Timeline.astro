@@ -1,0 +1,132 @@
+---
+import TitleSections from "@/components/TitleSections.astro";
+import {
+  LucideSearch,
+  LucideCalendarClock,
+  LucidePlayCircle,
+  LucideLifeBuoy,
+} from "@lucide/astro";
+
+const steps = [
+  {
+    icon: LucideSearch,
+    title: "Análisis",
+    description:
+      "Evaluamos sus necesidades y procesos actuales para identificar oportunidades de mejora.",
+    color: "primary",
+  },
+  {
+    icon: LucideCalendarClock,
+    title: "Planificación",
+    description:
+      "Diseñamos la estrategia y cronograma de implementación adaptados a sus objetivos.",
+    color: "support-1",
+  },
+  {
+    icon: LucidePlayCircle,
+    title: "Ejecución",
+    description:
+      "Implementamos la solución SAP con metodología probada y mejores prácticas.",
+    color: "support-2",
+  },
+  {
+    icon: LucideLifeBuoy,
+    title: "Soporte",
+    description:
+      "Brindamos soporte continuo y optimización para maximizar el retorno de inversión.",
+    color: "emphasis",
+  },
+];
+---
+
+<section
+  id="proceso"
+  class="py-20 bg-background/50 backdrop-blur-sm relative overflow-hidden"
+>
+  <div class="container mx-auto px-4 max-w-6xl">
+    <TitleSections
+      title="Nuestro Proceso de Trabajo"
+    />
+
+    <!-- Línea conectora (desktop) -->
+    <div
+      id="timeline-line"
+      class="hidden md:block absolute left-1/2 -translate-x-1/2 top-56 h-0.5 bg-primary/20 w-0 origin-left"
+    ></div>
+
+    <ol
+      class="relative mt-16 space-y-16 md:space-y-0 md:grid md:grid-cols-4 md:gap-12"
+      aria-label="Proceso de trabajo"
+      itemscope
+      itemtype="https://schema.org/ItemList"
+    >
+      {steps.map((step, index) => (
+        <li
+          class="group flex flex-col items-center text-center md:text-left md:items-start relative"
+          itemprop="itemListElement"
+          itemscope
+          itemtype="https://schema.org/ListItem"
+        >
+          <meta itemprop="position" content={`${index + 1}`} />
+          <!-- número en círculo -->
+          <div
+            class={`flex items-center justify-center w-14 h-14 rounded-full bg-${step.color} text-white text-xl font-bold mb-4 shadow-lg relative z-10`}
+          >
+            {index + 1}
+          </div>
+          <!-- título -->
+          <h3
+            class="text-xl font-semibold text-gray-900 mb-2 flex items-center gap-2"
+            itemprop="name"
+          >
+            <step.icon class={`w-6 h-6 text-${step.color}`} /> {step.title}
+          </h3>
+          <!-- descripción -->
+          <p class="text-text/80 max-w-xs" itemprop="description">
+            {step.description}
+          </p>
+
+        </li>
+      ))}
+    </ol>
+  </div>
+
+
+</section>
+  <!-- Animaciones GSAP -->
+<script>
+    import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animación de aparición para cada paso
+    gsap.from('#proceso li', {
+        opacity: 0,
+        y: 60,
+        duration: 0.6,
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: '#proceso li',
+          start: 'top 80%',
+        },
+      });
+
+    // Animar línea horizontal en desktop
+    const line = document.getElementById('timeline-line');
+    if (line) {
+      gsap.fromTo(
+        line,
+        { width: 0 },
+        {
+          width: '80%',
+          ease: 'power1.inOut',
+          scrollTrigger: {
+            trigger: line.parentElement,
+            start: 'top 70%',
+            end: 'bottom 20%',
+            scrub: true,
+          },
+        },
+      );
+    }
+</script>

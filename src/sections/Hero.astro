@@ -1,51 +1,66 @@
 ---
-import { Phone } from "@lucide/astro";
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
 ---
 
 <section
-  class="h-screen w-full bg-gradient-to-b from-primary/40 via-primary/20 to-background"
+  class="relative overflow-hidden h-[70vh] w-full flex flex-col items-center justify-center gap-6"
 >
-  <div
-    class="flex items-center justify-center gap-8 h-full w-full max-w-[1300px] mx-auto animate-blurred-fade-in animate-duration-1000"
+  <h1
+    class="text-5xl md:text-6xl font-extrabold tracking-widest text-center leading-tight drop-shadow-xl"
   >
-    <article
-      class="z-10 w-full max-w-6xl mx-auto pl-16 flex flex-col gap-6 flex-1"
-    >
-      <h1 class="md:text-6xl text-2xl font-bold">
-        Transforma su negocio con <strong>SAP</strong>
-      </h1>
-      <p class="md:text-xl text-lg text-text/85 text-pretty">
-        Somos especialistas en <strong
-          >implementación, soporte y consultoría SAP</strong
-        >. Ayudamos a empresas a <strong>optimizar sus procesos</strong> y
-        <strong>alcanzar la excelencia operacional</strong>.
-      </p>
+    {title}
+  </h1>
 
-      <div class="flex items-center gap-4">
-        <a
-          id="cta"
-          href="#"
-          class="flex items-center gap-2 px-6 py-2 text-md rounded-xl bg-primary/80 hover:bg-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-white hover:scale-105 group"
-          ><Phone class="w-6 h-6 group-hover:rotate-6 transition-transform" /> Solicitar
-          asesoría gratuita</a
-        >
-        <a
-          id="cta"
-          href="#"
-          class="px-6 py-2 text-md rounded-xl border border-primary text-primary hover:bg-primary/20 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:scale-105 group"
-          >Ver Servicios</a
-        >
-      </div>
-    </article>
-
-    <div
-      class="w-full h-3/4 flex-1 flex items-center justify-center rounded-2xl overflow-hidden bg-background-cards group"
-    >
-      <img
-        src="https://media.istockphoto.com/id/2170713366/photo/sap-system-and-business-process-automation-concept-businessman-with-icons-sap-software-for.jpg?s=1024x1024&w=is&k=20&c=1b0rwlDimb0VGWOPtZvh15FtdbAr7StWSZ0nrtm7gkc="
-        alt=""
-        class="w-auto h-full object-cover scale-110 group-hover:scale-105 transition-all duration-300"
-      />
-    </div>
-  </div>
+  <p
+    class="text-lg md:text-xl font-thin text-text/90 text-balance text-center w-1/2 mx-auto"
+  >
+    <slot />
+  </p>
 </section>
+
+<script>
+  import gsap from "gsap";
+  import { SplitText } from "gsap/SplitText";
+  gsap.registerPlugin(SplitText);
+
+  const h1 = document.querySelector("h1");
+  const p = document.querySelector("p");
+
+  const splitText = new SplitText(h1, {
+    type: "chars",
+    charsClass: "char",
+  });
+
+  const splitText2 = new SplitText(p, {
+    type: "chars",
+    charsClass: "char",
+  });
+
+  gsap.from(splitText.chars, {
+    duration: 1,
+    y: 50,
+    opacity: 0,
+    ease: "power3.out",
+    stagger: 0.02,
+  });
+
+  gsap.from(splitText2.chars, {
+    duration: 1,
+    y: 50,
+    opacity: 0,
+    ease: "power3.out",
+    stagger: 0.02,
+  });
+
+  // subtle floating animation for background blob
+  gsap.to("#hero-blob", {
+    duration: 40,
+    rotate: 360,
+    ease: "none",
+    repeat: -1,
+  });
+</script>

@@ -1,6 +1,8 @@
 ---
 import TitleSections from "@/components/TitleSections.astro";
 import {
+  LucideCheckCircle,
+  LucideCircleArrowRight,
   LucideEye,
   LucideGlobe,
   LucideLink,
@@ -91,7 +93,7 @@ import {
   >
     <!-- Card SAP Business One -->
     <article
-      class="group relative bg-gradient-to-br from-black/20 to-black/40 backdrop-blur rounded-xl p-8 shadow-lg flex flex-col gap-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-white/5 overflow-hidden"
+      class="group relative bg-background-cards backdrop-blur rounded-xl p-8 shadow-lg flex flex-col gap-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-white/5 overflow-hidden"
     >
       <div
         class="absolute -right-10 -top-10 w-32 h-32 bg-emphasis/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -102,35 +104,42 @@ import {
       >
         <LucideTrendingUp class="w-6 h-6 text-emphasis" />
       </div>
-      <header class="space-y-2">
+      <header class="space-y-2 text-center">
         <h4
           class="text-2xl font-bold bg-gradient-to-r from-emphasis to-emphasis/80 bg-clip-text text-transparent"
         >
           SAP Business One
         </h4>
         <p class="text-sm text-text/80 font-medium">
-          ERP completo para pequeñas y medianas empresas.
+          Solución ERP integral para pequeñas y medianas empresas que buscan
+          crecer y optimizar sus operaciones.
         </p>
       </header>
-      <p class="text-text/90 text-sm leading-relaxed flex-1">
-        Centraliza finanzas, ventas, inventario y operaciones en una sola
-        plataforma para impulsar el crecimiento.
-      </p>
-      <a
-        href="/sap-business-one"
-        class="inline-flex items-center gap-2 mt-4 text-emphasis font-semibold text-sm group-hover:gap-3 transition-all duration-300 hover:opacity-90"
-      >
-        Saber más
-        <span
-          class="inline-block group-hover:translate-x-1 transition-transform"
-          >→</span
+      <ul class="flex flex-col gap-2">
+        <li class="flex items-center gap-2">
+          <LucideCheckCircle class="w-6 h-6 text-emphasis" /> Gestion Financiera
+        </li>
+        <li class="flex items-center gap-2">
+          <LucideCheckCircle class="w-6 h-6 text-emphasis" /> Control de Inventarios
+        </li>
+        <li class="flex items-center gap-2">
+          <LucideCheckCircle class="w-6 h-6 text-emphasis" /> CRM Integrado
+        </li>
+      </ul>
+      <div class="flex justify-end">
+        <a
+          href="/sap-business-one"
+          class="inline-flex items-center gap-2 mt-4 text-emphasis font-semibold text-sm group-hover:gap-3 transition-all duration-300 hover:opacity-90"
         >
-      </a>
+          Saber más
+          <LucideCircleArrowRight class="w-6 h-6 text-emphasis flex-shrink-0" />
+        </a>
+      </div>
     </article>
 
     <!-- Card SAP S/4HANA -->
     <article
-      class="group relative bg-gradient-to-br from-black/20 to-black/40 backdrop-blur rounded-xl p-8 shadow-lg flex flex-col gap-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-white/5 overflow-hidden"
+      class="group relative bg-background-cards backdrop-blur rounded-xl p-8 shadow-lg flex flex-col gap-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-white/5 overflow-hidden"
     >
       <div
         class="absolute -right-10 -top-10 w-32 h-32 bg-support-2/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -141,35 +150,47 @@ import {
       >
         <LucideZap class="w-6 h-6 text-support-2" />
       </div>
-      <header class="space-y-2">
+      <header class="space-y-2 text-center">
         <h4
-          class="text-2xl font-bold bg-gradient-to-r from-support-2 to-support-2/80 bg-clip-text text-transparent"
+          class="text-2xl font-bold text-center bg-gradient-to-r from-support-2 to-support-2/80 bg-clip-text text-transparent"
         >
           SAP S/4HANA
         </h4>
         <p class="text-sm text-text/80 font-medium">
-          Suite de próxima generación para grandes organizaciones.
+          Suite empresarial de próxima generación con capacidades de análisis en
+          tiempo real y procesamiento in-memory.
         </p>
       </header>
-      <p class="text-text/90 text-sm leading-relaxed flex-1">
-        Plataforma en memoria que integra procesos complejos en tiempo real y
-        favorece la innovación digital.
-      </p>
-      <a
-        href="/sap-s4hana"
-        class="inline-flex items-center gap-2 mt-4 text-support-2 font-semibold text-sm group-hover:gap-3 transition-all duration-300 hover:opacity-90"
-      >
-        Saber más
-        <span
-          class="inline-block group-hover:translate-x-1 transition-transform"
-          >→</span
+      <ul class="flex flex-col gap-2">
+        <li class="flex items-center gap-2">
+          <LucideCheckCircle class="w-6 h-6 text-support-2" /> Análisis en tiempo
+          real
+        </li>
+        <li class="flex items-center gap-2">
+          <LucideCheckCircle class="w-6 h-6 text-support-2" /> Procesos Simplificados
+        </li>
+        <li class="flex items-center gap-2">
+          <LucideCheckCircle class="w-6 h-6 text-support-2" /> Experiencia de Usuario
+          Moderna
+        </li>
+      </ul>
+
+      <div class="flex justify-end">
+        <a
+          href="/sap-s4hana"
+          class="inline-flex items-center gap-2 mt-4 text-support-2 font-semibold text-sm group-hover:gap-3 transition-all duration-300 hover:opacity-90"
         >
-      </a>
+          Saber más
+          <LucideCircleArrowRight
+            class="w-6 h-6 text-support-2 flex-shrink-0"
+          />
+        </a>
+      </div>
     </article>
 
     <!-- Card SAP SuccessFactors -->
     <article
-      class="group relative bg-gradient-to-br from-black/20 to-black/40 backdrop-blur rounded-xl p-8 shadow-lg flex flex-col gap-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-white/5 overflow-hidden"
+      class="group relative bg-background-cards backdrop-blur rounded-xl p-8 shadow-lg flex flex-col gap-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-white/5 overflow-hidden"
     >
       <div
         class="absolute -right-10 -top-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -180,30 +201,38 @@ import {
       >
         <LucideGlobe class="w-6 h-6 text-primary" />
       </div>
-      <header class="space-y-2">
+      <header class="space-y-2 text-center">
         <h4
-          class="text-2xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent"
+          class="text-2xl font-bold text-center bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent"
         >
           SAP SuccessFactors
         </h4>
         <p class="text-sm text-text/80 font-medium">
-          Gestión integral del capital humano en la nube.
+          Solución completa de gestión de capital humano en la nube para
+          optimizar el rendimiento de los empleados.
         </p>
       </header>
-      <p class="text-text/90 text-sm leading-relaxed flex-1">
-        Atrae, desarrolla y retén talento con herramientas HXM centradas en la
-        experiencia del empleado.
-      </p>
-      <a
-        href="/sap-successfactors"
-        class="inline-flex items-center gap-2 mt-4 text-primary font-semibold text-sm group-hover:gap-3 transition-all duration-300 hover:opacity-90"
-      >
-        Saber más
-        <span
-          class="inline-block group-hover:translate-x-1 transition-transform"
-          >→</span
+      <ul class="flex flex-col gap-2">
+        <li class="flex items-center gap-2">
+          <LucideCheckCircle class="w-6 h-6 text-support-2" /> Gestion de Talento
+        </li>
+        <li class="flex items-center gap-2">
+          <LucideCheckCircle class="w-6 h-6 text-support-2" /> Nomina y Beneficios
+        </li>
+        <li class="flex items-center gap-2">
+          <LucideCheckCircle class="w-6 h-6 text-support-2" /> Analisis de RRHH
+        </li>
+      </ul>
+
+      <div class="flex justify-end">
+        <a
+          href="/sap-successfactors"
+          class="flex items-center justify-end gap-2 mt-4 text-primary font-semibold text-sm group-hover:gap-3 transition-all duration-300 hover:opacity-90 w-fit"
         >
-      </a>
+          Saber más
+          <LucideCircleArrowRight class="w-6 h-6 text-primary flex-shrink-0" />
+        </a>
+      </div>
     </article>
   </div>
 </section>

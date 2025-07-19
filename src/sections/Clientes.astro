@@ -1,256 +1,264 @@
 ---
-import {
-  Icon,
-  LucideBuilding,
-  LucideFactory,
-  LucideShoppingBag,
-} from "@lucide/astro";
+import TitleSections from "@/components/TitleSections.astro";
+import { LucideQuote } from "@lucide/astro";
 ---
 
 <section
   id="clientes"
   class="py-20 px-4 md:px-8 lg:px-16 relative overflow-hidden"
 >
-  <!-- Background elements -->
-  <div class="blob-glow bg-primary/30 w-64 h-64 -top-10 -left-10"></div>
-  <div class="blob-glow bg-support-2/20 w-80 h-80 bottom-20 right-10"></div>
+  <TitleSections title="Empresas Líderes Confían en Nosotros">
+    Hemos trabajado con más de 200 empresas de diferentes sectores, desde
+    startups hasta corporaciones multinacionales
+  </TitleSections>
 
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-family-title mb-4 font-bold">
-        Nuestros <span class="text-primary">Clientes</span>
-      </h2>
-      <p class="text-lg max-w-3xl mx-auto">
-        Empresas que han confiado en nuestros servicios para transformar su
-        infraestructura tecnológica y potenciar su crecimiento.
-      </p>
+  <div class="client-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+    <!-- Cliente 1 -->
+    <a
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="p-8 rounded-3xl bg-background-cards hover:scale-105 transition-transform duration-300"
+    >
+      <img
+        src="https://img1.wsimg.com/isteam/ip/2cd89f36-0995-4f04-8e8f-481d190c4149/WhatsApp%20Image%202025-04-22%20at%204.20.49%20PM.jpeg/:/rs=w:220,h:111,cg:true,m/cr=w:220,h:111"
+        alt=""
+        class="w-full h-32 md:h-40 object-contain object-center"
+      />
+    </a>
+
+    <!-- Cliente 2 -->
+    <a
+      href="https://www.unipuebla-dl.net/inicio"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="p-8 rounded-3xl bg-background-cards hover:scale-105 transition-transform duration-300"
+    >
+      <img
+        src="https://img1.wsimg.com/isteam/ip/2cd89f36-0995-4f04-8e8f-481d190c4149/UNI.png/:/rs=w:273,h:200,cg:true,m/cr=w:273,h:200"
+        alt=""
+        class="w-full h-32 md:h-40 object-contain object-center"
+      />
+    </a>
+
+    <!-- Cliente 3 -->
+    <a
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="p-8 rounded-3xl bg-background-cards hover:scale-105 transition-transform duration-300"
+    >
+      <img
+        src="https://img1.wsimg.com/isteam/ip/2cd89f36-0995-4f04-8e8f-481d190c4149/BOLERO%20COPIS.jpg/:/rs=w:352,h:200,cg:true,m/cr=w:352,h:200"
+        alt=""
+        class="w-full h-32 md:h-40 object-contain object-center"
+      />
+    </a>
+
+    <!-- Cliente 4 -->
+    <a
+      href="https://www.puebla.gob.mx/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="p-8 rounded-3xl bg-background-cards hover:scale-105 transition-transform duration-300"
+    >
+      <img
+        src="https://img1.wsimg.com/isteam/ip/2cd89f36-0995-4f04-8e8f-481d190c4149/gob.png/:/rs=w:200,h:200,cg:true,m/cr=w:200,h:200"
+        alt=""
+        class="w-full h-32 md:h-40 object-contain object-center"
+      />
+    </a>
+
+    <!-- Cliente 5 -->
+    <a
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="p-8 rounded-3xl bg-background-cards hover:scale-105 transition-transform duration-300"
+    >
+      <img
+        src="https://img1.wsimg.com/isteam/ip/2cd89f36-0995-4f04-8e8f-481d190c4149/salsa.jpeg/:/rs=w:200,h:200,cg:true,m/cr=w:200,h:200"
+        alt=""
+        class="w-full h-32 md:h-40 object-contain object-center"
+      />
+    </a>
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+    <!-- En números -->
+    <div
+      class="text-center p-8 bg-background-cards rounded-3xl flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300"
+    >
+      <span class="text-4xl font-bold text-primary">200+</span>
+      <span class="text-text/80">Empresas Atendidas</span>
     </div>
 
-    <div class="client-grid grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- Cliente 1 -->
-      <div
-        class="client-card bg-background-cards rounded-xl p-6 shadow-lg border border-secondary/10 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:border-primary/30"
-      >
-        <div class="client-logo flex justify-center mb-6 h-24 items-center">
-          <!-- Placeholder para logo de cliente -->
-          <div
-            class="w-full h-full flex items-center justify-center bg-background/50 rounded-lg"
-          >
-            <LucideBuilding class="w-16 h-16 text-primary" />
-          </div>
-        </div>
-        <h3 class="text-xl font-semibold mb-2 text-center">
-          Minas de Zacatlan
-        </h3>
-        <p class="text-center text-secondary">
-          Implementamos soluciones SAP que optimizaron sus procesos de negocio,
-          resultando en un aumento del 30% en eficiencia operativa.
-        </p>
-      </div>
+    <div
+      class="text-center p-8 bg-background-cards rounded-3xl flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300"
+    >
+      <span class="text-4xl font-bold text-primary">15+</span>
+      <span class="text-text/80">Sectores Industriales</span>
+    </div>
 
-      <!-- Cliente 2 -->
-      <a
-        href="#contacto"
-        class="client-card bg-background-cards rounded-xl p-6 shadow-lg border border-secondary/10 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:border-primary/30"
-      >
-        <div class="client-logo flex justify-center mb-6 h-24 items-center">
-          <!-- Placeholder para logo de cliente -->
-          <div
-            class="w-full h-full flex items-center justify-center bg-background/50 rounded-lg"
-          >
-            <LucideFactory class="w-16 h-16 text-support-1" />
-          </div>
-        </div>
-        <h3 class="text-xl font-semibold mb-2 text-center">Unipuebla</h3>
-        <p class="text-center text-secondary">
-          Modernizamos su infraestructura con SAP S/4HANA, permitiéndoles
-          integrar todas sus operaciones y mejorar la toma de decisiones.
-        </p>
-      </a>
+    <div
+      class="text-center p-8 bg-background-cards rounded-3xl flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300"
+    >
+      <span class="text-4xl font-bold text-primary">98%</span>
+      <span class="text-text/80">Satisfacción de Clientes</span>
+    </div>
 
-      <!-- Cliente 3 -->
-      <div
-        class="client-card bg-background-cards rounded-xl p-6 shadow-lg border border-secondary/10 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:border-primary/30"
-      >
-        <div class="client-logo flex justify-center mb-6 h-24 items-center">
-          <!-- Placeholder para logo de cliente -->
-          <div
-            class="w-full h-full flex items-center justify-center bg-background/50 rounded-lg"
-          >
-            <LucideShoppingBag class="w-16 h-16 text-emphasis" />
-          </div>
-        </div>
-        <h3 class="text-xl font-semibold mb-2 text-center">
-          Gobierno de Puebla
-        </h3>
-        <p class="text-center text-secondary">
-          Implementamos SAP Retail para gestionar su cadena de suministro,
-          logrando reducir costos y mejorar la experiencia del cliente.
-        </p>
-      </div>
-
-      <!-- Cliente 4 -->
-      <div
-        class="client-card bg-background-cards rounded-xl p-6 shadow-lg border border-secondary/10 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:border-primary/30"
-      >
-        <div class="client-logo flex justify-center mb-6 h-24 items-center">
-          <!-- Placeholder para logo de cliente -->
-          <div
-            class="w-full h-full flex items-center justify-center bg-background/50 rounded-lg"
-          >
-            <Icon name="building-2" class="w-16 h-16 text-support-2" />
-          </div>
-        </div>
-        <h3 class="text-xl font-semibold mb-2 text-center">Gessa Salaverry</h3>
-        <p class="text-center text-secondary">
-          Desarrollamos una solución personalizada de SAP Banking para optimizar
-          sus operaciones financieras y cumplir con regulaciones.
-        </p>
-      </div>
-
-      <!-- Testimonial destacado -->
-      <div
-        class="mt-16 bg-gradient-to-r from-background-cards to-background-cards/80 p-8 rounded-xl border border-primary/20 shadow-lg relative overflow-hidden testimonial-container col-span-2"
-      >
-        <div
-          class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-support-1 to-emphasis"
-        >
-        </div>
-        <div class="flex flex-col md:flex-row gap-8 items-center">
-          <div class="testimonial-image w-full md:w-1/3 flex justify-center">
-            <div
-              class="w-48 h-48 rounded-full bg-background/50 flex items-center justify-center border-2 border-primary/30"
-            >
-              <Icon name="user" class="w-24 h-24 text-primary/70" />
-            </div>
-          </div>
-          <div class="testimonial-content w-full md:w-2/3">
-            <Icon name="quote" class="w-12 h-12 text-primary/30 mb-4" />
-            <p class="text-lg italic mb-6">
-              "Trabajar con INFRALUX ha sido una experiencia transformadora para
-              nuestra empresa. Su equipo de expertos no solo implementó SAP de
-              manera eficiente, sino que también nos acompañó en todo el proceso
-              de adaptación. Hemos visto resultados inmediatos en términos de
-              productividad y toma de decisiones."
-            </p>
-            <div>
-              <p class="font-semibold text-primary">Carlos Rodríguez</p>
-              <p class="text-sm text-secondary">
-                Director de Tecnología, BOLERO JEANS.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <div class="mt-16 text-center col-span-2">
-        <h3 class="text-2xl font-family-title mb-4">
-          ¿Listo para transformar tu negocio?
-        </h3>
-        <a
-          href="#contacto"
-          class="inline-block bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
-        >
-          Contáctanos hoy
-        </a>
-      </div>
+    <div
+      class="text-center p-8 bg-background-cards rounded-3xl flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300"
+    >
+      <span class="text-4xl font-bold text-primary">24/7</span>
+      <span class="text-text/80">Soporte al cliente</span>
     </div>
   </div>
 
-  <script>
-    import { gsap } from "gsap";
-    import { ScrollTrigger } from "gsap/ScrollTrigger";
+  <!-- Testimonial destacado -->
+  <div
+    class="mt-16 bg-gradient-to-r from-background-cards to-background-cards/80 p-8 rounded-xl border border-primary/20 shadow-lg relative overflow-hidden testimonial-container"
+  >
+    <div
+      class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-support-1 to-emphasis"
+    >
+    </div>
+    <div class="flex flex-col md:flex-row gap-8 items-center">
+      <div class="testimonial-image w-full md:w-1/3 flex justify-center">
+        <div
+          class="w-48 h-48 rounded-full bg-background/50 flex items-center justify-center border-2 border-primary/30"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            class="w-full h-full object-cover rounded-full"
+          />
+        </div>
+      </div>
+      <div class="testimonial-content w-full md:w-2/3">
+        <LucideQuote class="w-12 h-12 text-primary/30 mb-4" />
+        <p class="text-lg italic mb-6">
+          "Trabajar con INFRALUX ha sido una experiencia transformadora para
+          nuestra empresa. Su equipo de expertos no solo implementó SAP de
+          manera eficiente, sino que también nos acompañó en todo el proceso de
+          adaptación. Hemos visto resultados inmediatos en términos de
+          productividad y toma de decisiones."
+        </p>
+        <div>
+          <p class="font-semibold text-primary">Carlos Rodríguez</p>
+          <p class="text-sm text-secondary">
+            Director de Tecnología, BOLERO JEANS.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- CTA -->
+  <div class="mt-16 text-center">
+    <h3 class="text-2xl font-family-title mb-4">
+      ¿Listo para transformar tu negocio?
+    </h3>
+    <a
+      href="#contacto"
+      class="inline-block bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+    >
+      Contáctanos hoy
+    </a>
+  </div>
+</section>
 
-    // Registrar plugins
-    gsap.registerPlugin(ScrollTrigger);
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-    document.addEventListener("astro:page-load", () => {
-      // Animación para el título y subtítulo
-      gsap.from("#clientes h2", {
-        scrollTrigger: {
-          trigger: "#clientes",
-          start: "top 80%",
-        },
-        y: 50,
+  // Registrar plugins
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("astro:page-load", () => {
+    // Animación para el título y subtítulo
+    gsap.from("#clientes h2", {
+      scrollTrigger: {
+        trigger: "#clientes",
+        start: "top 80%",
+      },
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+    });
+
+    gsap.from("#clientes h2 + p", {
+      scrollTrigger: {
+        trigger: "#clientes",
+        start: "top 80%",
+      },
+      y: 30,
+      opacity: 0,
+      duration: 1,
+      delay: 0.3,
+      ease: "power3.out",
+    });
+
+    // Animación para las tarjetas de clientes
+    gsap.from(".client-card", {
+      scrollTrigger: {
+        trigger: ".client-grid",
+        start: "top 80%",
+      },
+      y: 60,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: "power2.out",
+    });
+
+    // Animación para el testimonial
+    const testimonialTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".testimonial-container",
+        start: "top 75%",
+      },
+    });
+
+    testimonialTl
+      .from(".testimonial-image", {
+        x: -50,
         opacity: 0,
         duration: 1,
-        ease: "power3.out",
-      });
-
-      gsap.from("#clientes h2 + p", {
-        scrollTrigger: {
-          trigger: "#clientes",
-          start: "top 80%",
-        },
-        y: 30,
-        opacity: 0,
-        duration: 1,
-        delay: 0.3,
-        ease: "power3.out",
-      });
-
-      // Animación para las tarjetas de clientes
-      gsap.from(".client-card", {
-        scrollTrigger: {
-          trigger: ".client-grid",
-          start: "top 80%",
-        },
-        y: 60,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.15,
         ease: "power2.out",
-      });
-
-      // Animación para el testimonial
-      const testimonialTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".testimonial-container",
-          start: "top 75%",
-        },
-      });
-
-      testimonialTl
-        .from(".testimonial-image", {
-          x: -50,
+      })
+      .from(
+        ".testimonial-content",
+        {
+          x: 50,
           opacity: 0,
           duration: 1,
           ease: "power2.out",
-        })
-        .from(
-          ".testimonial-content",
-          {
-            x: 50,
-            opacity: 0,
-            duration: 1,
-            ease: "power2.out",
-          },
-          "-=0.7"
-        )
-        .from(
-          ".testimonial-content .text-primary, .testimonial-content .text-sm",
-          {
-            y: 20,
-            opacity: 0,
-            duration: 0.6,
-            stagger: 0.2,
-            ease: "power2.out",
-          },
-          "-=0.4"
-        );
-
-      // Animación para el CTA
-      gsap.from("#clientes .mt-16.text-center", {
-        scrollTrigger: {
-          trigger: "#clientes .mt-16.text-center",
-          start: "top 85%",
         },
-        y: 30,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power2.out",
-      });
+        "-=0.7"
+      )
+      .from(
+        ".testimonial-content .text-primary, .testimonial-content .text-sm",
+        {
+          y: 20,
+          opacity: 0,
+          duration: 0.6,
+          stagger: 0.2,
+          ease: "power2.out",
+        },
+        "-=0.4"
+      );
+
+    // Animación para el CTA
+    gsap.from("#clientes .mt-16.text-center", {
+      scrollTrigger: {
+        trigger: "#clientes .mt-16.text-center",
+        start: "top 85%",
+      },
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power2.out",
     });
-  </script>
-</section>
+  });
+</script>

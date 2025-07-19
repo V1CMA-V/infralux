@@ -1,29 +1,12 @@
 ---
-import CardHelp from "@/components/CardHelp.astro";
+import Card from "@/components/Card.astro";
 import TitleSections from "@/components/TitleSections.astro";
 ---
 
 <section class="py-24 px-6 max-w-6xl mx-auto relative">
-  <TitleSections title="¿Cómo te podemos ayudar?">
-    Somos un equipo de profesionales con experiencia en soluciones SAP para
-    optimizar los procesos de tu empresa.
+  <TitleSections title="Nuestros Servicios SAP">
+    Ofrecemos soluciones integrales para todas sus necesidades SAP
   </TitleSections>
   <!-- Cards de servicios con diseño elegante -->
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-    <!-- Card 1 -->
-    <CardHelp title="SAP Business One" slug="business-one">
-      Implementación, mantenimiento y soporte técnico para pequeñas y medianas
-      empresas.
-    </CardHelp>
-    <!-- Card 2 -->
-    <CardHelp title="SAP R/3 by Design" slug="r3-by-design">
-      Implementación, mantenimiento y soluciones personalizadas para empresas en
-      crecimiento.
-    </CardHelp>
-    <!-- Card 3 -->
-    <CardHelp title="SAP S/4 HANA" slug="s4-hana">
-      Implementación, mantenimiento y migración a la plataforma más avanzada de
-      SAP.
-    </CardHelp>
-  </div>
+  <Card />
 </section>

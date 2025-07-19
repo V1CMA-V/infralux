@@ -1,9 +1,9 @@
 ---
 import TitleSections from "@/components/TitleSections.astro";
 import {
-  LucideCheck,
+  LucideArrowRight,
+  LucideChartArea,
   LucideClock,
-  LucideLineChart,
   LucideShield,
   LucideUsers,
 } from "@lucide/astro";
@@ -15,11 +15,9 @@ import {
   <div class="max-w-6xl mx-auto px-6">
     <!-- Encabezado de sección con título y descripción -->
     <div class="max-w-3xl mx-auto text-center mb-16">
-      <TitleSections title="Ventajas de SAP" />
-      <p class="text-lg md:text-xl text-text/90 mt-4">
-        Descubre por qué las empresas líderes confían en nuestros servicios de
-        implementación y consultoría SAP para transformar su negocio.
-      </p>
+      <TitleSections title="¿Por Qué Elegir SAP para su Empresa?" />
+      Descubre por qué las empresas líderes confían en nuestros servicios de implementación
+      y consultoría SAP para transformar su negocio.
     </div>
 
     <!-- Contenedor principal con dos columnas -->
@@ -74,10 +72,6 @@ import {
 
       <!-- Columna derecha: Lista de ventajas -->
       <div class="w-full lg:w-1/2 space-y-6">
-        <h3 class="text-2xl font-bold text-primary mb-6">
-          ¿Por qué elegir nuestros servicios SAP?
-        </h3>
-
         <!-- Ventaja 1 -->
         <div class="flex gap-4 items-start group">
           <div
@@ -87,12 +81,12 @@ import {
           </div>
           <div>
             <h4 class="text-xl font-semibold text-primary mb-2">
-              Experiencia certificada
+              Innovación Constante
             </h4>
             <p class="text-text/80">
-              Nuestro equipo cuenta con más de 10 años de experiencia y todas
-              las certificaciones oficiales de SAP para garantizar
-              implementaciones exitosas.
+              SAP invierte más de 4 mil millones de euros anuales en
+              investigación y desarrollo, garantizando que siempre tenga acceso
+              a las últimas tecnologías.
             </p>
           </div>
         </div>
@@ -106,12 +100,11 @@ import {
           </div>
           <div>
             <h4 class="text-xl font-semibold text-secondary mb-2">
-              Implementación rápida
+              Ecosistema Completo
             </h4>
             <p class="text-text/80">
-              Metodología ágil que reduce hasta un 30% el tiempo de
-              implementación comparado con métodos tradicionales, minimizando la
-              interrupción de tu negocio.
+              Desde ERP hasta análisis avanzados, SAP ofrece una suite completa
+              de soluciones que trabajan juntas perfectamente.
             </p>
           </div>
         </div>
@@ -125,11 +118,11 @@ import {
           </div>
           <div>
             <h4 class="text-xl font-semibold text-text mb-2">
-              Soporte personalizado
+              Soporte Mundial
             </h4>
             <p class="text-text/80">
-              Acompañamiento continuo durante y después de la implementación,
-              con tiempos de respuesta garantizados y atención personalizada.
+              Red global de partners y consultores especializados que garantizan
+              el éxito de su implementación.
             </p>
           </div>
         </div>
@@ -139,15 +132,15 @@ import {
           <div
             class="p-3 rounded-2xl bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300"
           >
-            <LucideLineChart class="w-6 h-6 text-primary" />
+            <LucideChartArea class="w-6 h-6 text-primary" />
           </div>
           <div>
             <h4 class="text-xl font-semibold text-primary mb-2">
-              ROI garantizado
+              Futuro Asegurado
             </h4>
             <p class="text-text/80">
-              Nuestros clientes experimentan un retorno de inversión promedio
-              del 200% en los primeros 18 meses tras la implementación.
+              Con más de 50 años en el mercado, SAP es una inversión segura para
+              el futuro de su empresa.
             </p>
           </div>
         </div>
@@ -159,7 +152,7 @@ import {
             class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-medium py-3 px-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-primary/20"
           >
             Solicitar consultoría gratuita
-            <LucideCheck class="w-5 h-5" />
+            <LucideArrowRight class="w-5 h-5" />
           </a>
         </div>
       </div>

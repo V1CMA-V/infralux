@@ -1,0 +1,51 @@
+---
+import { Phone } from "@lucide/astro";
+---
+
+<section
+  class="h-screen w-full bg-gradient-to-b from-primary via-primary/40 to-background"
+>
+  <div
+    class="flex items-center justify-center gap-8 h-full w-full max-w-[1300px] mx-auto animate-blurred-fade-in animate-duration-1000"
+  >
+    <article
+      class="z-10 w-full max-w-6xl mx-auto pl-16 flex flex-col gap-6 flex-1"
+    >
+      <h1 class="md:text-6xl text-2xl font-bold text-white">
+        Transforma su negocio con <strong>SAP</strong>
+      </h1>
+      <p class="md:text-xl text-lg text-pretty text-white">
+        Somos especialistas en <strong
+          >implementación, soporte y consultoría SAP</strong
+        >. Ayudamos a empresas a <strong>optimizar sus procesos</strong> y
+        <strong>alcanzar la excelencia operacional</strong>.
+      </p>
+
+      <div class="flex items-center gap-4">
+        <a
+          id="cta"
+          href="#"
+          class="flex items-center gap-2 px-6 py-2 text-md rounded-xl bg-primary/80 hover:bg-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-white hover:scale-105 group"
+          ><Phone class="w-6 h-6 group-hover:rotate-6 transition-transform" /> Solicitar
+          asesoría gratuita</a
+        >
+        <a
+          id="cta"
+          href="#"
+          class="px-6 py-2 text-md rounded-xl border border-primary text-primary hover:bg-primary/20 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:scale-105 group"
+          >Ver Servicios</a
+        >
+      </div>
+    </article>
+
+    <div
+      class="w-full h-3/4 flex-1 flex items-center justify-center rounded-2xl overflow-hidden bg-background-cards group"
+    >
+      <img
+        src="https://media.istockphoto.com/id/2170713366/photo/sap-system-and-business-process-automation-concept-businessman-with-icons-sap-software-for.jpg?s=1024x1024&w=is&k=20&c=1b0rwlDimb0VGWOPtZvh15FtdbAr7StWSZ0nrtm7gkc="
+        alt=""
+        class="w-auto h-full object-cover scale-110 group-hover:scale-105 transition-all duration-300"
+      />
+    </div>
+  </div>
+</section>

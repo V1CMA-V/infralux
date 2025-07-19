@@ -1,0 +1,56 @@
+---
+import {
+  type Icon as IconType,
+  ChartLine,
+  Shield,
+  UserSearch,
+  Zap,
+} from "@lucide/astro";
+
+type MenuItem = {
+  title: string;
+  description: string;
+  icon: typeof IconType;
+};
+
+const menuItems: MenuItem[] = [
+  {
+    title: "Soporte y Mantenimiento",
+    description:
+      "Mantenimiento preventivo y correctivo para garantizar el óptimo funcionamiento de sus sistemas SAP.",
+    icon: Shield,
+  },
+  {
+    title: "Consultoria SAP",
+    description:
+      "Asesoramiento estratégico para optimizar procesos de negocio y maximizar el ROI de SAP.",
+    icon: UserSearch,
+  },
+  {
+    title: "Implementación SAP",
+    description:
+      "Implementación completa de soluciones SAP adaptadas a las necesidades específicas de su empresa.",
+    icon: Zap,
+  },
+  {
+    title: "Formación SAP",
+    description:
+      "Capacitación especializada para que su equipo aproveche al máximo las funcionalidades de SAP.",
+    icon: ChartLine,
+  },
+];
+---
+
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
+  {
+    menuItems.map((item) => (
+      <div class="p-6 bg-background-cards border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+        <item.icon class="w-8 h-8 text-blue-600 mb-4" />
+        <h3 class="text-xl font-semibold text-gray-900 mb-2 leading-tight">
+          {item.title}
+        </h3>
+        <p class="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+      </div>
+    ))
+  }
+</div>

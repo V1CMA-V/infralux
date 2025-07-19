@@ -1,0 +1,95 @@
+---
+import { LucideCheckCircle, LucideEye, LucideMedal, LucideTarget } from "@lucide/astro";
+
+interface Item {
+  title: string;
+  description?: string;
+  icon: any;
+  list?: string[];
+}
+
+const items: Item[] = [
+  {
+    title: "Misión",
+    description:
+      "Empoderar a las empresas con soluciones SAP innovadoras que impulsen su crecimiento, eficiencia y competitividad en el mercado global.",
+    icon: LucideTarget,
+  },
+  {
+    title: "Visión",
+    description:
+      "Ser reconocidos como el partner SAP más confiable e innovador de la región, liderando la transformación digital empresarial.",
+    icon: LucideEye,
+  },
+  {
+    title: "Valores",
+    icon: LucideMedal,
+    list: [
+      "Excelencia técnica",
+      "Compromiso con el cliente",
+      "Innovación continua",
+      "Integridad y transparencia",
+      "Trabajo en equipo",
+    ],
+  },
+];
+---
+
+<section
+  id="mision-vision-valores"
+  class="py-20 px-4 md:px-8 lg:px-0 bg-background"
+  aria-label="Misión, visión y valores de INFRALUX"
+>
+  <h2 class="sr-only">Misión, visión y valores</h2>
+
+  <div
+    class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8"
+    role="list"
+  >
+    {items.map((item) => (
+      <article
+        class="space-y-6 border border-secondary/20 rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow duration-300 bg-white"
+        itemprop="values"
+      >
+        <item.icon class="w-16 h-16 mx-auto text-primary" aria-hidden="true" />
+        <header>
+          <h3 class="text-2xl font-bold mb-2" itemprop="name">
+            {item.title}
+          </h3>
+        </header>
+
+        {item.description && (
+          <p class="text-text/80 leading-relaxed" itemprop="description">
+            {item.description}
+          </p>
+        )}
+
+        {item.list && (
+          <ul class="space-y-2 text-left max-w-[18rem] mx-auto" aria-label="Lista de valores">
+            {item.list.map((value) => (
+              <li class="flex items-start gap-2" itemprop="value">
+                <LucideCheckCircle
+                  class="w-4 h-4 text-green-700 mt-1 flex-shrink-0"
+                  aria-hidden="true"
+                />
+                <span>{value}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </article>
+    ))}
+  </div>
+
+  <!-- Datos estructurados para SEO -->
+  <script type="application/ld+json" is:inline>
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "INFRALUX",
+      mission: items[0].description,
+      vision: items[1].description,
+      values: items[2].list,
+    })}
+  </script>
+</section>

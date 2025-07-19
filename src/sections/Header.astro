@@ -12,24 +12,24 @@ const isActive = (path: string) => pathname === path;
 >
   <a
     href="/"
-    class={`md:hidden font-family-title tracking-widest ${isActive("/") ? "font-bold text-2xl gradient-text-animate" : "text-text"}`}
+    class={`md:hidden font-family-title tracking-widest font-bold text-2xl gradient-text-animate`}
     >INFRALUX</a
   >
   <!-- Desktop Nav -->
   <nav class="hidden md:flex gap-8 items-center justify-center">
-    <ul class="flex gap-18 text-xl font-thin text-text">
+    <ul class="flex gap-18 text-xl font-thin">
       <li>
         <a
-          href="/acerca-de"
-          class={`inline-block hover:text-primary hover:scale-105 transition-all duration-300 ${
-            isActive("/acerca-de") ? "text-primary" : ""
-          }`}>Acerca de</a
+          href="/sobre-nosotros"
+          class={`inline-block hover:text-emphasis hover:scale-105 transition-all duration-300 ${
+            isActive("/sobre-nosotros") ? "text-primary" : ""
+          }`}>Nosotros</a
         >
       </li>
       <li>
         <a
           href="/sap"
-          class={`inline-block hover:text-primary hover:scale-105 transition-all duration-300 ${
+          class={`inline-block hover:text-emphasis hover:scale-105 transition-all duration-300 ${
             isActive("/sap") ? "text-primary" : ""
           }`}
           >¿Qué es SAP?
@@ -45,7 +45,7 @@ const isActive = (path: string) => pathname === path;
       <li>
         <a
           href="/servicios"
-          class={`inline-block hover:text-primary hover:scale-105 transition-all duration-300 ${
+          class={`inline-block hover:text-emphasis hover:scale-105 transition-all duration-300 ${
             isActive("/servicios") ? "text-primary" : ""
           }`}>Servicios</a
         >
@@ -53,7 +53,7 @@ const isActive = (path: string) => pathname === path;
       <li>
         <a
           href="/contacto"
-          class={`inline-block hover:text-primary hover:scale-105 transition-all duration-300 ${
+          class={`inline-block hover:text-emphasis hover:scale-105 transition-all duration-300 ${
             isActive("/contacto") ? "text-primary" : ""
           }`}>Contacto</a
         >
@@ -67,7 +67,7 @@ const isActive = (path: string) => pathname === path;
     class="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-primary"
     aria-label="Abrir menú"
   >
-    <LucideMenu class="w-6 h-6 text-primary" />
+    <LucideMenu class="w-6 h-6 text-text" />
   </button>
 </header>
 
@@ -86,32 +86,32 @@ const isActive = (path: string) => pathname === path;
     >
       <LucideX class="w-8 h-8 text-primary" />
     </button>
-    <ul class="flex flex-col gap-8 text-xl font-thin text-text mt-12">
-      <li>
+    <ul class="flex flex-col gap-8 text-xl font-thin mt-12">
+      <li class="border-b pb-2 border-secondary/10">
         <a
-          href="/acerca-de"
-          class={`inline-block hover:text-primary transition-all duration-300 ${isActive("/acerca-de") ? "text-primary" : ""}`}
-          >Acerca de</a
+          href="/sobre-nosotros"
+          class={`inline-block ${isActive("/sobre-nosotros") ? "text-primary" : ""}`}
+          >Nosotrs</a
         >
       </li>
-      <li>
+      <li class="border-b pb-2 border-secondary/10">
         <a
           href="/sap"
-          class={`inline-block hover:text-primary transition-all duration-300 ${isActive("/sap") ? "text-primary" : ""}`}
+          class={`inline-block ${isActive("/sap") ? "text-primary" : ""}`}
           >¿Qué es SAP?</a
         >
       </li>
-      <li>
+      <li class="border-b pb-2 border-secondary/10">
         <a
           href="/servicios"
-          class={`inline-block hover:text-primary transition-all duration-300 ${isActive("/servicios") ? "text-primary" : ""}`}
+          class={`inline-block ${isActive("/servicios") ? "text-primary" : ""}`}
           >Servicios</a
         >
       </li>
-      <li>
+      <li class="border-b pb-2 border-secondary/10">
         <a
           href="/contacto"
-          class={`inline-block hover:text-primary transition-all duration-300 ${isActive("/contacto") ? "text-primary" : ""}`}
+          class={`inline-block ${isActive("/contacto") ? "text-primary" : ""}`}
           >Contacto</a
         >
       </li>

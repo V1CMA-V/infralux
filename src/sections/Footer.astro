@@ -1,75 +1,74 @@
 ---
-import { Icon } from "@lucide/astro";
+import {
+  LucideArrowUp,
+  LucideLinkedin,
+  LucideNavigation,
+  LucidePhone,
+  Mail,
+  MapPin,
+  Phone,
+  type Icon as IconType,
+} from "@lucide/astro";
 
 // Año actual para el copyright
 const currentYear = new Date().getFullYear();
 
 // Enlaces de navegación
 const navLinks = [
-  { name: "Inicio", url: "#" },
-  { name: "Servicios", url: "#como-ayudar" },
-  { name: "Nosotros", url: "#quienes-somos" },
-  { name: "SAP", url: "#que-es-sap" },
-  { name: "Clientes", url: "#clientes" },
-  { name: "Contacto", url: "#contacto" },
+  { name: "Inicio", url: "/" },
+  { name: "Servicios", url: "/servicios" },
+  { name: "¿Qué es SAP?", url: "/sap" },
+  { name: "Nosotros", url: "/sobre-nosotros" },
+  { name: "Contacto", url: "/contacto" },
 ];
 
-// Redes sociales
-const socialLinks = [
-  { name: "facebook", url: "https://facebook.com/", label: "Facebook" },
-  { name: "twitter", url: "https://twitter.com/", label: "Twitter" },
-  { name: "linkedin", url: "https://linkedin.com/", label: "LinkedIn" },
-  { name: "instagram", url: "https://instagram.com/", label: "Instagram" },
-];
+type contactInfo = {
+  icon: typeof IconType;
+  text: string;
+};
 
 // Información de contacto
 const contactInfo = [
-  { icon: "map-pin", text: "Av. Reforma 123, Col. Centro, Puebla, México" },
-  { icon: "phone", text: "(+52) 222 123 4567" },
-  { icon: "mail", text: "contacto@infralux.com" },
+  { icon: MapPin, text: "Av. Reforma 123, Col. Centro, Puebla, México" },
+  { icon: Phone, text: "(+52) 222 123 4567" },
+  { icon: Mail, text: "contacto@infralux.com" },
 ];
 ---
 
-<footer class="bg-background-cards pt-16 pb-8 border-t border-secondary/10">
+<footer class="bg-gradient-to-br from-text to-blue-950 pt-16 pb-8 text-white">
   <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
     <!-- Sección principal del footer con logo, enlaces y contacto -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
       <!-- Logo e información de la empresa -->
-      <div class="col-span-1 md:col-span-2 lg:col-span-1">
-        <div class="mb-4">
+      <div class="flex flex-col items-start justify-start gap-3 col-span-2">
+        <div class="">
           <a href="#" class="inline-block">
-            <h2 class="text-3xl font-bold font-family-title">
-              <span class="text-primary">INFRA</span><span class="text-emphasis"
-                >LUX</span
-              >
+            <h2 class="text-3xl font-bold font-family-title text-primary">
+              INFRALUX
             </h2>
           </a>
         </div>
-        <p class="text-secondary mb-6 max-w-md">
-          Expertos en implementación y consultoría SAP, transformando negocios
-          con soluciones tecnológicas innovadoras y personalizadas.
+        <p class="text-white/90 max-w-md">
+          Especialistas en soluciones SAP para empresas que buscan optimizar sus
+          procesos de negocio y alcanzar la excelencia operacional.
         </p>
         <div class="flex space-x-4">
-          {
-            socialLinks.map((social) => (
-              <a
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="bg-background p-2 rounded-full hover:bg-primary/10 transition-all duration-300"
-                aria-label={social.label}
-              >
-                <Icon name={social.name} class="w-5 h-5 text-primary" />
-              </a>
-            ))
-          }
+          <a
+            href="https://www.linkedin.com/company/infralux"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-background p-2 rounded-full hover:bg-primary/10 transition-all duration-300"
+            aria-label="LinkedIn"
+          >
+            <LucideLinkedin class="w-5 h-5 text-primary" />
+          </a>
         </div>
       </div>
 
       <!-- Enlaces de navegación -->
       <div>
         <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
-          <Icon name="navigation" class="w-5 h-5 text-primary" />
+          <LucideNavigation class="w-5 h-5 text-primary" />
           <span>Navegación</span>
         </h3>
         <ul class="space-y-2">
@@ -78,9 +77,8 @@ const contactInfo = [
               <li>
                 <a
                   href={link.url}
-                  class="text-secondary hover:text-primary transition-colors duration-300 flex items-center gap-1"
+                  class="text-white/90 hover:text-primary transition-colors duration-300 w-fit"
                 >
-                  <Icon name="chevron-right" class="w-4 h-4" />
                   {link.name}
                 </a>
               </li>
@@ -92,136 +90,60 @@ const contactInfo = [
       <!-- Información de contacto -->
       <div>
         <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
-          <Icon name="phone" class="w-5 h-5 text-primary" />
+          <LucidePhone class="w-5 h-5 text-primary" />
           <span>Contacto</span>
         </h3>
         <ul class="space-y-3">
           {
             contactInfo.map((item) => (
               <li class="flex items-start gap-3">
-                <Icon name={item.icon} class="w-5 h-5 text-primary mt-1" />
-                <span class="text-secondary">{item.text}</span>
+                <item.icon class="w-5 h-5 text-white/90 mt-1" />
+                <span class="text-white/90">{item.text}</span>
               </li>
             ))
           }
         </ul>
       </div>
 
-      <!-- Boletín informativo -->
-      <div>
-        <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
-          <Icon name="mail" class="w-5 h-5 text-primary" />
-          <span>Boletín</span>
-        </h3>
-        <p class="text-secondary mb-4">
-          Suscríbete para recibir noticias y actualizaciones sobre SAP.
-        </p>
-        <form class="flex">
-          <input
-            type="email"
-            placeholder="Tu correo electrónico"
-            class="bg-background border border-secondary/20 rounded-l-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all flex-1"
-            required
-          />
-          <button
-            type="submit"
-            class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-r-lg transition-colors duration-300"
-            aria-label="Suscribirse al boletín"
-          >
-            <Icon name="send" class="w-5 h-5" />
-          </button>
-        </form>
-      </div>
-    </div>
+      <!-- Separador -->
+      <div class="border-t border-white/10 my-8 col-span-4"></div>
 
-    <!-- Separador -->
-    <div class="border-t border-secondary/10 my-8"></div>
-
-    <!-- Sección inferior con copyright y enlaces legales -->
-    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-      <div class="text-secondary text-sm">
+      <!-- Sección inferior con copyright y enlaces legales -->
+      <div class="text-white/90 text-sm col-span-4 text-center">
         &copy; {currentYear}
         <span class="text-primary font-medium">INFRALUX</span>. Todos los
         derechos reservados.
       </div>
 
-      <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
-        <a
-          href="#"
-          class="text-secondary hover:text-primary transition-colors duration-300"
-          >Términos y Condiciones</a
-        >
-        <a
-          href="#"
-          class="text-secondary hover:text-primary transition-colors duration-300"
-          >Política de Privacidad</a
-        >
-        <a
-          href="#"
-          class="text-secondary hover:text-primary transition-colors duration-300"
-          >Aviso Legal</a
-        >
-      </div>
+      <!-- Botón de volver arriba -->
+      <button
+        id="backToTop"
+        class="fixed bottom-6 right-6 z-50 rounded-full p-2 bg-primary text-white opacity-0 invisible transition-all duration-300 hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50 cursor-pointer"
+        aria-label="Volver arriba"
+      >
+        <LucideArrowUp class="w-5 h-5" />
+      </button>
     </div>
-  </div>
 
-  <!-- Botón de volver arriba -->
-  <button
-    id="backToTop"
-    class="fixed bottom-6 right-6 bg-primary text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50 z-50"
-    aria-label="Volver arriba"
-  >
-    <Icon name="arrow-up" class="w-5 h-5" />
-  </button>
-</footer>
+    <script>
+      const backToTopButton = document.getElementById("backToTop");
 
-<script>
-  // Script para el botón de volver arriba
-  document.addEventListener("astro:page-load", () => {
-    const backToTopButton = document.getElementById("backToTop");
-
-    if (backToTopButton) {
-      // Mostrar/ocultar botón según scroll
-      const toggleBackToTopButton = () => {
-        if (window.scrollY > 300) {
-          backToTopButton.classList.remove("opacity-0", "invisible");
-          backToTopButton.classList.add("opacity-100", "visible");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) {
+          backToTopButton?.classList.remove("opacity-0", "invisible");
+          backToTopButton?.classList.add("opacity-100", "visible");
         } else {
-          backToTopButton.classList.add("opacity-0", "invisible");
-          backToTopButton.classList.remove("opacity-100", "visible");
+          backToTopButton?.classList.remove("opacity-100", "visible");
+          backToTopButton?.classList.add("opacity-0", "invisible");
         }
-      };
+      });
 
-      // Evento de scroll
-      window.addEventListener("scroll", toggleBackToTopButton);
-
-      // Inicializar estado del botón
-      toggleBackToTopButton();
-
-      // Acción del botón
-      backToTopButton.addEventListener("click", () => {
+      backToTopButton?.addEventListener("click", () => {
         window.scrollTo({
           top: 0,
           behavior: "smooth",
         });
       });
-    }
-
-    // Animación suave para todos los enlaces internos
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (this: HTMLAnchorElement, e) {
-        const targetId = this.getAttribute("href");
-        if (targetId === "#") return;
-
-        const targetElement = document.querySelector(targetId as string);
-        if (targetElement) {
-          e.preventDefault();
-          window.scrollTo({
-            top: targetElement.getBoundingClientRect().top,
-            behavior: "smooth",
-          });
-        }
-      });
-    });
-  });
-</script>
+    </script>
+  </div>
+</footer>

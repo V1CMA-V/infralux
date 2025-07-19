@@ -1,0 +1,289 @@
+---
+import {
+  LucideBookOpenCheck,
+  LucideChartLine,
+  LucideCheckCircle,
+  LucideClock,
+  LucideGitCompareArrows,
+  LucideShield,
+  LucideUserSearch,
+  LucideZap,
+} from "@lucide/astro";
+---
+
+<section
+  id="servicios"
+  class="py-24 px-4 md:px-8 lg:px-0 bg-background animate-fade-in-up duration-500"
+>
+  <div class="max-w-7xl mx-auto space-y-16">
+    <!-- GRID DE SERVICIOS -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10" role="list">
+      <!-- Soporte y mantenimiento -->
+      <article
+        class="relative flex flex-col gap-6 border-l-4 border-primary rounded-xl shadow-md hover:shadow-lg transition-shadow bg-background-cards p-8"
+        itemprop="hasOfferCatalog"
+        itemscope
+        itemtype="https://schema.org/Service"
+      >
+        <meta itemprop="serviceType" content="Soporte y Mantenimiento SAP" />
+        <!-- icono -->
+        <div
+          class="absolute -left-7 -top-7 bg-background p-2 rounded-full shadow"
+        >
+          <LucideShield class="w-8 h-8 text-primary" />
+        </div>
+        <!-- encabezado -->
+        <header class="space-y-1 ml-2">
+          <h3 class="text-2xl font-bold text-gray-900" itemprop="name">
+            Soporte y Mantenimiento
+          </h3>
+          <p class="text-primary font-medium" itemprop="subtitle">
+            Mantenga sus sistemas SAP funcionando perfectamente
+          </p>
+        </header>
+
+        <!-- descripción -->
+        <p class="text-text/90" itemprop="description">
+          Garantizamos que sus sistemas SAP operen con la máxima eficiencia y
+          disponibilidad las 24&nbsp;horas del día.
+        </p>
+
+        <!-- beneficios -->
+        <ul class="space-y-2" aria-label="Beneficios">
+          {
+            [
+              "Monitoreo proactivo 24/7",
+              "Mantenimiento preventivo programado",
+              "Resolución rápida de incidencias",
+              "Actualizaciones y parches de seguridad",
+              "Backup y recuperación de datos",
+            ].map((benefit) => (
+              <li class="flex items-start gap-2" role="listitem">
+                <LucideCheckCircle class="w-5 h-5 text-primary" />
+                <span class="text-text/80">{benefit}</span>
+              </li>
+            ))
+          }
+        </ul>
+
+        <!-- banner inferior -->
+        <aside
+          class="mt-6 rounded-lg bg-primary/5 p-4 flex items-start gap-3 text-sm"
+          aria-label="Acuerdo de nivel de servicio"
+        >
+          <div>
+            <p class="font-semibold text-primary flex items-center gap-2">
+              <LucideClock class="w-5 h-5 text-primary" />SLA Garantizado
+            </p>
+            <p class="text-text/70">
+              Tiempo de respuesta menor a 2&nbsp;horas para incidencias críticas
+            </p>
+          </div>
+        </aside>
+      </article>
+
+      <!-- Consultoría -->
+      <article
+        class="relative flex flex-col gap-6 border-l-4 border-support-1 rounded-xl shadow-md hover:shadow-lg transition-shadow bg-background-cards p-8"
+        itemprop="hasOfferCatalog"
+        itemscope
+        itemtype="https://schema.org/Service"
+      >
+        <meta itemprop="serviceType" content="Consultoría SAP" />
+        <div
+          class="absolute -left-7 -top-7 bg-background p-2 rounded-full shadow"
+        >
+          <LucideUserSearch class="w-8 h-8 text-support-1" />
+        </div>
+        <header class="space-y-1 ml-2">
+          <h3 class="text-2xl font-bold text-gray-900" itemprop="name">
+            Consultoría SAP
+          </h3>
+          <p class="text-support-1 font-medium">
+            Estrategias personalizadas para su negocio
+          </p>
+        </header>
+        <p class="text-text/90" itemprop="description">
+          Nuestros consultores analizan sus procesos y diseñan estrategias que
+          maximizan el ROI y optimizan las operaciones.
+        </p>
+        <ul class="space-y-2">
+          {
+            [
+              "Análisis de procesos de negocio",
+              "Diseño de arquitectura SAP",
+              "Optimización de rendimiento",
+              "Migración a S/4HANA",
+              "Estrategias de transformación digital",
+            ].map((benefit) => (
+              <li class="flex items-start gap-2" role="listitem">
+                <LucideCheckCircle class="w-5 h-5 text-support-1" />
+                <span class="text-text/80">{benefit}</span>
+              </li>
+            ))
+          }
+        </ul>
+
+        <aside
+          class="mt-6 rounded-lg bg-support-1/5 p-4 flex items-start gap-3 text-sm"
+          aria-label="Certificación equipo"
+        >
+          <div>
+            <p class="font-semibold text-support-1 flex items-center gap-2">
+              <LucideShield class="w-5 h-5 text-support-1" />Consultores
+              Certificados
+            </p>
+            <p class="text-text/70">
+              Equipo con más de 10&nbsp;años de experiencia en SAP
+            </p>
+          </div>
+        </aside>
+      </article>
+
+      <!-- Implementación y Desarrollo -->
+      <article
+        class="relative flex flex-col gap-6 border-l-4 border-support-2 rounded-xl shadow-md hover:shadow-lg transition-shadow bg-background-cards p-8"
+        itemprop="hasOfferCatalog"
+        itemscope
+        itemtype="https://schema.org/Service"
+      >
+        <meta
+          itemprop="serviceType"
+          content="Implementación y Desarrollo SAP"
+        />
+        <div
+          class="absolute -left-7 -top-7 bg-background p-2 rounded-full shadow"
+        >
+          <LucideZap class="w-8 h-8 text-support-2" />
+        </div>
+        <header class="space-y-1 ml-2">
+          <h3 class="text-2xl font-bold text-gray-900" itemprop="name">
+            Implementación y Desarrollo
+          </h3>
+          <p class="text-support-2 font-medium">
+            Soluciones SAP a medida para su empresa
+          </p>
+        </header>
+        <p class="text-text/90" itemprop="description">
+          Implementamos soluciones SAP completas y desarrollamos funcionalidades
+          personalizadas que se adaptan perfectamente a sus necesidades
+          específicas.
+        </p>
+        <ul class="space-y-2">
+          {
+            [
+              "Implementación completa de SAP",
+              "Desarrollo de módulos personalizados",
+              "Integración con sistemas externos",
+              "Configuración de workflows",
+              "Testing y validación completa",
+            ].map((benefit) => (
+              <li class="flex items-start gap-2" role="listitem">
+                <LucideCheckCircle class="w-5 h-5 text-support-2" />
+                <span class="text-text/80">{benefit}</span>
+              </li>
+            ))
+          }
+        </ul>
+
+        <aside
+          class="mt-6 rounded-lg bg-support-2/5 p-4 flex items-start gap-3 text-sm"
+          aria-label="Certificación equipo"
+        >
+          <div>
+            <p class="font-semibold text-support-2 flex items-center gap-2">
+              <LucideGitCompareArrows
+                class="w-5 h-5 text-support-2"
+              />Metodología Ágil
+            </p>
+            <p class="text-text/70">
+              Implementación rápida con entregas incrementales
+            </p>
+          </div>
+        </aside>
+      </article>
+
+      <!-- Formación y Capacitación -->
+      <article
+        class="relative flex flex-col gap-6 border-l-4 border-emphasis rounded-xl shadow-md hover:shadow-lg transition-shadow bg-background-cards p-8"
+        itemprop="hasOfferCatalog"
+        itemscope
+        itemtype="https://schema.org/Service"
+      >
+        <meta itemprop="serviceType" content="Consultoría SAP" />
+        <div
+          class="absolute -left-7 -top-7 bg-background p-2 rounded-full shadow"
+        >
+          <LucideChartLine class="w-8 h-8 text-emphasis" />
+        </div>
+        <header class="space-y-1 ml-2">
+          <h3 class="text-2xl font-bold text-gray-900" itemprop="name">
+            Formación y Capacitación
+          </h3>
+          <p class="text-emphasis font-medium">
+            Empoderamos a su equipo con conocimiento SAP
+          </p>
+        </header>
+        <p class="text-text/90" itemprop="description">
+          Programas de capacitación diseñados para que su equipo domine las
+          funcionalidades SAP y maximice la productividad desde el primer día.
+        </p>
+        <ul class="space-y-2">
+          {
+            [
+              "Cursos presenciales y virtuales",
+              "Capacitación por roles específicos",
+              "Certificaciones oficiales SAP",
+              "Material de apoyo personalizado",
+              "Seguimiento post-capacitación",
+            ].map((benefit) => (
+              <li class="flex items-start gap-2" role="listitem">
+                <LucideCheckCircle class="w-5 h-5 text-emphasis" />
+                <span class="text-text/80">{benefit}</span>
+              </li>
+            ))
+          }
+        </ul>
+
+        <aside
+          class="mt-6 rounded-lg bg-emphasis/5 p-4 flex items-start gap-3 text-sm"
+          aria-label="Certificación equipo"
+        >
+          <div>
+            <p class="font-semibold text-emphasis flex items-center gap-2">
+              <LucideBookOpenCheck class="w-5 h-5 text-emphasis" />Instructores
+              Certificados
+            </p>
+            <p class="text-text/70">
+              Formadores con certificación SAP y experiencia práctica
+            </p>
+          </div>
+        </aside>
+      </article>
+    </div>
+  </div>
+
+  <!-- JSON-LD para SEO -->
+  <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org/",
+      "@type": "Service",
+      "name": "Servicios SAP - INFRALUX",
+      "provider": {
+        "@type": "Organization",
+        "name": "INFRALUX",
+        "url": "https://infralux.com"
+      },
+      "hasOfferCatalog": [
+        {
+          "@type": "OfferCatalog",
+          "name": "Soporte y Mantenimiento SAP"
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Consultoría SAP"
+        }
+      ]
+    }
+  </script>
+</section>

@@ -1,0 +1,43 @@
+---
+import TitleSections from "@/components/TitleSections.astro";
+import { LucideBookOpenCheck } from "@lucide/astro";
+
+const certifications = [
+  {
+    name: "SAP Gold Partner",
+  },
+  {
+    name: "ISO 9001:2015",
+  },
+  {
+    name: "SAP S/4HANA Certified",
+  },
+  {
+    name: "SuccessFactors Partner",
+  },
+];
+---
+
+<section
+  id="certifications"
+  class="py-26 w-full bg-gradient-to-tr from-primary/80 to-background-cards"
+>
+  <TitleSections title="Certificaciones" />
+
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-7xl mx-auto"
+  >
+    {
+      certifications.map((certification) => (
+        <div class="flex items-center gap-4 flex-col p-6 rounded-lg bg-background-cards border border-primary/10 hover:border-primary/30 transition-all duration-300 text-center">
+          <div class="bg-primary/10 p-3 rounded-full">
+            <LucideBookOpenCheck class="w-16 h-16 text-primary" />
+          </div>
+          <h3 class="text-lg font-bold mb-2 text-text/85">
+            {certification.name}
+          </h3>
+        </div>
+      ))
+    }
+  </div>
+</section>

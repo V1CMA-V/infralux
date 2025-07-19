@@ -1,0 +1,88 @@
+---
+import TitleSections from "@/components/TitleSections.astro";
+import { LucideChevronDown } from "@lucide/astro";
+
+interface FAQItem {
+  q: string;
+  a: string;
+}
+
+const faqs: FAQItem[] = [
+  {
+    q: "¿Cuánto tiempo toma una implementación SAP?",
+    a: "El tiempo varía según la complejidad del proyecto. Una implementación típica de SAP Business One toma 3-6 meses, mientras que S/4HANA puede durar 6-18 meses.",
+  },
+  {
+    q: "¿Ofrecen soporte en español?",
+    a: "Sí, nuestro equipo habla español nativo y brinda soporte completo, incluida documentación y capacitación en español.",
+  },
+  {
+    q: "¿Qué incluye la consulta gratuita?",
+    a: "Incluye análisis de necesidades, evaluación de procesos actuales, recomendaciones de solución y propuesta de proyecto sin compromiso.",
+  },
+  {
+    q: "¿Trabajan con empresas pequeñas?",
+    a: "Absolutamente. Tenemos experiencia con empresas desde 10 hasta 10 000+ empleados y adaptamos nuestras soluciones al tamaño y presupuesto de cada cliente.",
+  },
+];
+---
+
+<section id="faq" class="py-24 px-4 md:px-8 lg:px-0 bg-gradient-to-t from-primary/30 to-background" aria-label="Preguntas frecuentes">
+  <TitleSections title="Preguntas Frecuentes" />
+
+  <div class="max-w-7xl mx-auto flex flex-col gap-6 " role="list">
+    {faqs.map(({ q, a }) => (
+      <details
+        class="group border border-secondary/20 rounded-lg bg-background-cards p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+        itemscope
+        itemprop="mainEntity"
+        itemtype="https://schema.org/Question"
+      >
+        <summary class="cursor-pointer list-none flex items-center justify-between gap-4" aria-expanded="false">
+          <h3 class="font-semibold text-text" itemprop="name">{q}</h3>
+          <LucideChevronDown class="w-5 h-5 text-primary transition-transform duration-300 group-open:rotate-180" aria-hidden="true" />
+        </summary>
+        <div class="mt-4 text-text/80 leading-relaxed" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+          <p itemprop="text">{a}</p>
+        </div>
+      </details>
+    ))}
+  </div>
+
+  <!-- SEO structured data -->
+  <script type="application/ld+json" is:inline>
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqs.map(({ q, a }) => ({
+        "@type": "Question",
+        name: q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: a,
+        },
+      })),
+    })}
+  </script>
+</section>
+
+
+<style>
+
+  details {
+    animation: faq-item both linear;
+    animation-timeline: view();
+    animation-range: 15% 30%;
+  }
+
+  @keyframes faq-item {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
