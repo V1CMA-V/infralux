@@ -31,16 +31,16 @@ const { title } = Astro.props;
   const p = document.querySelector("p");
 
   const splitText = new SplitText(h1, {
-    type: "chars",
-    charsClass: "char",
+    type: "words",
+    wordsClass: "word",
   });
 
   const splitText2 = new SplitText(p, {
-    type: "chars",
-    charsClass: "char",
+    type: "words",
+    wordsClass: "word",
   });
 
-  gsap.from(splitText.chars, {
+  gsap.from(splitText.words, {
     duration: 1,
     y: 50,
     opacity: 0,
@@ -48,7 +48,7 @@ const { title } = Astro.props;
     stagger: 0.02,
   });
 
-  gsap.from(splitText2.chars, {
+  gsap.from(splitText2.words, {
     duration: 1,
     y: 50,
     opacity: 0,
