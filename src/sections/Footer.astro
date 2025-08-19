@@ -8,31 +8,31 @@ import {
   MapPin,
   Phone,
   type Icon as IconType,
-} from "@lucide/astro";
+} from '@lucide/astro'
 
 // Año actual para el copyright
-const currentYear = new Date().getFullYear();
+const currentYear = new Date().getFullYear()
 
 // Enlaces de navegación
 const navLinks = [
-  { name: "Inicio", url: "/" },
-  { name: "Servicios", url: "/servicios" },
-  { name: "¿Qué es SAP?", url: "/sap" },
-  { name: "Nosotros", url: "/sobre-nosotros" },
-  { name: "Contacto", url: "/contacto" },
-];
+  { name: 'Inicio', url: '/' },
+  { name: 'Servicios', url: '/servicios' },
+  { name: '¿Qué es SAP?', url: '/sap' },
+  { name: 'Nosotros', url: '/sobre-nosotros' },
+  { name: 'Contacto', url: '/contacto' },
+]
 
 type contactInfo = {
-  icon: typeof IconType;
-  text: string;
-};
+  icon: typeof IconType
+  text: string
+}
 
 // Información de contacto
 const contactInfo = [
-  { icon: MapPin, text: "Av. Reforma 123, Col. Centro, Puebla, México" },
-  { icon: Phone, text: "(+52) 222 123 4567" },
-  { icon: Mail, text: "contacto@infralux.com" },
-];
+  { icon: MapPin, text: 'Oficina Sonata Coworking Puebla Pue.' },
+  { icon: Phone, text: '(+52) 2211310407' },
+  { icon: Mail, text: 'contacto@infraluxap.com.mx' },
+]
 ---
 
 <footer class="bg-gradient-to-br from-text to-blue-950 pt-16 pb-8 text-white">
@@ -126,24 +126,24 @@ const contactInfo = [
     </div>
 
     <script>
-      const backToTopButton = document.getElementById("backToTop");
+      const backToTopButton = document.getElementById('backToTop')
 
-      window.addEventListener("scroll", () => {
+      window.addEventListener('scroll', () => {
         if (window.scrollY > 400) {
-          backToTopButton?.classList.remove("opacity-0", "invisible");
-          backToTopButton?.classList.add("opacity-100", "visible");
+          backToTopButton?.classList.remove('opacity-0', 'invisible')
+          backToTopButton?.classList.add('opacity-100', 'visible')
         } else {
-          backToTopButton?.classList.remove("opacity-100", "visible");
-          backToTopButton?.classList.add("opacity-0", "invisible");
+          backToTopButton?.classList.remove('opacity-100', 'visible')
+          backToTopButton?.classList.add('opacity-0', 'invisible')
         }
-      });
+      })
 
-      backToTopButton?.addEventListener("click", () => {
+      backToTopButton?.addEventListener('click', () => {
         window.scrollTo({
           top: 0,
-          behavior: "smooth",
-        });
-      });
+          behavior: 'smooth',
+        })
+      })
     </script>
   </div>
 </footer>

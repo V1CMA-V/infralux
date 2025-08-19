@@ -1,6 +1,6 @@
 ---
-import TitleSections from "@/components/TitleSections.astro";
-import { LucideQuote } from "@lucide/astro";
+import TitleSections from '@/components/TitleSections.astro'
+import { LucideQuote } from '@lucide/astro'
 ---
 
 <section
@@ -89,7 +89,7 @@ import { LucideQuote } from "@lucide/astro";
     <div
       class="text-center p-8 bg-background-cards rounded-3xl flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300"
     >
-      <span class="text-4xl font-bold text-primary">200+</span>
+      <span class="text-4xl font-bold text-primary">50+</span>
       <span class="text-text/80">Empresas Atendidas</span>
     </div>
 
@@ -168,97 +168,97 @@ import { LucideQuote } from "@lucide/astro";
 </section>
 
 <script>
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import { gsap } from 'gsap'
+  import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
   // Registrar plugins
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger)
 
-  document.addEventListener("astro:page-load", () => {
+  document.addEventListener('astro:page-load', () => {
     // Animación para el título y subtítulo
-    gsap.from("#clientes h2", {
+    gsap.from('#clientes h2', {
       scrollTrigger: {
-        trigger: "#clientes",
-        start: "top 80%",
+        trigger: '#clientes',
+        start: 'top 80%',
       },
       y: 50,
       opacity: 0,
       duration: 1,
-      ease: "power3.out",
-    });
+      ease: 'power3.out',
+    })
 
-    gsap.from("#clientes h2 + p", {
+    gsap.from('#clientes h2 + p', {
       scrollTrigger: {
-        trigger: "#clientes",
-        start: "top 80%",
+        trigger: '#clientes',
+        start: 'top 80%',
       },
       y: 30,
       opacity: 0,
       duration: 1,
       delay: 0.3,
-      ease: "power3.out",
-    });
+      ease: 'power3.out',
+    })
 
     // Animación para las tarjetas de clientes
-    gsap.from(".client-card", {
+    gsap.from('.client-card', {
       scrollTrigger: {
-        trigger: ".client-grid",
-        start: "top 80%",
+        trigger: '.client-grid',
+        start: 'top 80%',
       },
       y: 60,
       opacity: 0,
       duration: 0.8,
       stagger: 0.15,
-      ease: "power2.out",
-    });
+      ease: 'power2.out',
+    })
 
     // Animación para el testimonial
     const testimonialTl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".testimonial-container",
-        start: "top 75%",
+        trigger: '.testimonial-container',
+        start: 'top 75%',
       },
-    });
+    })
 
     testimonialTl
-      .from(".testimonial-image", {
+      .from('.testimonial-image', {
         x: -50,
         opacity: 0,
         duration: 1,
-        ease: "power2.out",
+        ease: 'power2.out',
       })
       .from(
-        ".testimonial-content",
+        '.testimonial-content',
         {
           x: 50,
           opacity: 0,
           duration: 1,
-          ease: "power2.out",
+          ease: 'power2.out',
         },
-        "-=0.7"
+        '-=0.7'
       )
       .from(
-        ".testimonial-content .text-primary, .testimonial-content .text-sm",
+        '.testimonial-content .text-primary, .testimonial-content .text-sm',
         {
           y: 20,
           opacity: 0,
           duration: 0.6,
           stagger: 0.2,
-          ease: "power2.out",
+          ease: 'power2.out',
         },
-        "-=0.4"
-      );
+        '-=0.4'
+      )
 
     // Animación para el CTA
-    gsap.from("#clientes .mt-16.text-center", {
+    gsap.from('#clientes .mt-16.text-center', {
       scrollTrigger: {
-        trigger: "#clientes .mt-16.text-center",
-        start: "top 85%",
+        trigger: '#clientes .mt-16.text-center',
+        start: 'top 85%',
       },
       y: 30,
       opacity: 0,
       duration: 0.8,
-      ease: "power2.out",
-    });
-  });
+      ease: 'power2.out',
+    })
+  })
 </script>
