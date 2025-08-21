@@ -1,14 +1,14 @@
 ---
-import { LucideMenu, LucideX } from "@lucide/astro";
+import { LucideMenu, LucideX } from '@lucide/astro'
 
-const { pathname } = Astro.url;
+const { pathname } = Astro.url
 
 // Resaltar la clase activa en el menú de navegación
-const isActive = (path: string) => pathname === path;
+const isActive = (path: string) => pathname === path
 ---
 
 <header
-  class="fixed top-0 left-0 right-0 z-50 flex justify-between md:justify-center items-center py-8 px-8 w-full max-w-6xl mx-auto"
+  class="fixed top-0 left-0 right-0 z-50 flex justify-between md:justify-center items-center py-8 px-8 w-full max-w-6xl md:mx-auto"
 >
   <a
     href="/"
@@ -22,7 +22,7 @@ const isActive = (path: string) => pathname === path;
         <a
           href="/sobre-nosotros"
           class={`inline-block hover:text-emphasis hover:scale-105 transition-all duration-300 ${
-            isActive("/sobre-nosotros") ? "text-primary" : ""
+            isActive('/sobre-nosotros') ? 'text-primary' : ''
           }`}>Nosotros</a
         >
       </li>
@@ -30,7 +30,7 @@ const isActive = (path: string) => pathname === path;
         <a
           href="/sap"
           class={`inline-block hover:text-emphasis hover:scale-105 transition-all duration-300 ${
-            isActive("/sap") ? "text-primary" : ""
+            isActive('/sap') ? 'text-primary' : ''
           }`}
           >¿Qué es SAP?
         </a>
@@ -38,7 +38,7 @@ const isActive = (path: string) => pathname === path;
       <li>
         <a
           href="/"
-          class={`font-family-title tracking-widest text-2xl hover:scale-105 transition-transform duration-300 inline-block ${isActive("/") ? "font-bold gradient-text-animate" : ""}`}
+          class={`font-family-title tracking-widest text-2xl hover:scale-105 transition-transform duration-300 inline-block ${isActive('/') ? 'font-bold gradient-text-animate' : ''}`}
           >INFRALUX</a
         >
       </li>
@@ -46,7 +46,7 @@ const isActive = (path: string) => pathname === path;
         <a
           href="/servicios"
           class={`inline-block hover:text-emphasis hover:scale-105 transition-all duration-300 ${
-            isActive("/servicios") ? "text-primary" : ""
+            isActive('/servicios') ? 'text-primary' : ''
           }`}>Servicios</a
         >
       </li>
@@ -54,7 +54,7 @@ const isActive = (path: string) => pathname === path;
         <a
           href="/contacto"
           class={`inline-block hover:text-emphasis hover:scale-105 transition-all duration-300 ${
-            isActive("/contacto") ? "text-primary" : ""
+            isActive('/contacto') ? 'text-primary' : ''
           }`}>Contacto</a
         >
       </li>
@@ -90,28 +90,28 @@ const isActive = (path: string) => pathname === path;
       <li class="border-b pb-2 border-secondary/10">
         <a
           href="/sobre-nosotros"
-          class={`inline-block ${isActive("/sobre-nosotros") ? "text-primary" : ""}`}
+          class={`inline-block ${isActive('/sobre-nosotros') ? 'text-primary' : ''}`}
           >Nosotrs</a
         >
       </li>
       <li class="border-b pb-2 border-secondary/10">
         <a
           href="/sap"
-          class={`inline-block ${isActive("/sap") ? "text-primary" : ""}`}
+          class={`inline-block ${isActive('/sap') ? 'text-primary' : ''}`}
           >¿Qué es SAP?</a
         >
       </li>
       <li class="border-b pb-2 border-secondary/10">
         <a
           href="/servicios"
-          class={`inline-block ${isActive("/servicios") ? "text-primary" : ""}`}
+          class={`inline-block ${isActive('/servicios') ? 'text-primary' : ''}`}
           >Servicios</a
         >
       </li>
       <li class="border-b pb-2 border-secondary/10">
         <a
           href="/contacto"
-          class={`inline-block ${isActive("/contacto") ? "text-primary" : ""}`}
+          class={`inline-block ${isActive('/contacto') ? 'text-primary' : ''}`}
           >Contacto</a
         >
       </li>
@@ -144,29 +144,29 @@ const isActive = (path: string) => pathname === path;
 <!-- Script para menú mobile -->
 <script lang="ts" is:inline>
   // Espera a que el DOM esté listo
-  document.addEventListener("DOMContentLoaded", () => {
-    const menuBtn = document.getElementById("mobile-menu-btn");
-    const menuOverlay = document.getElementById("mobile-menu-overlay");
-    const closeBtn = document.getElementById("mobile-menu-close");
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('mobile-menu-btn')
+    const menuOverlay = document.getElementById('mobile-menu-overlay')
+    const closeBtn = document.getElementById('mobile-menu-close')
 
     function openMenu() {
-      menuOverlay?.classList.remove("opacity-0", "pointer-events-none");
-      menuOverlay?.classList.add("opacity-100");
-      document.body.style.overflow = "hidden";
+      menuOverlay?.classList.remove('opacity-0', 'pointer-events-none')
+      menuOverlay?.classList.add('opacity-100')
+      document.body.style.overflow = 'hidden'
     }
     function closeMenu() {
-      menuOverlay?.classList.add("opacity-0", "pointer-events-none");
-      menuOverlay?.classList.remove("opacity-100");
-      document.body.style.overflow = "";
+      menuOverlay?.classList.add('opacity-0', 'pointer-events-none')
+      menuOverlay?.classList.remove('opacity-100')
+      document.body.style.overflow = ''
     }
-    menuBtn?.addEventListener("click", openMenu);
-    closeBtn?.addEventListener("click", closeMenu);
-    menuOverlay?.addEventListener("click", (e) => {
-      if (e.target === menuOverlay) closeMenu();
-    });
+    menuBtn?.addEventListener('click', openMenu)
+    closeBtn?.addEventListener('click', closeMenu)
+    menuOverlay?.addEventListener('click', (e) => {
+      if (e.target === menuOverlay) closeMenu()
+    })
     // Cerrar menú al navegar
-    menuOverlay?.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", closeMenu);
-    });
-  });
+    menuOverlay?.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeMenu)
+    })
+  })
 </script>
