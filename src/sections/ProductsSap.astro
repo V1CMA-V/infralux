@@ -6,6 +6,10 @@ import {
   LucideDatabase,
   LucideUsers,
 } from '@lucide/astro'
+
+import { whatsDefaultMessage } from '@/utils/whatsMessage'
+
+const message = whatsDefaultMessage()
 ---
 
 <section class="w-full py-20 bg-background" id="productos-sap">
@@ -90,13 +94,13 @@ import {
             </li>
           </ul>
 
-          <a
+          <!-- <a
             href="/sap/business-one"
             class="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all duration-300"
           >
             Conocer más sobre SAP Business One
             <LucideArrowRight class="w-5 h-5" />
-          </a>
+          </a> -->
         </div>
       </div>
 
@@ -153,13 +157,13 @@ import {
             </li>
           </ul>
 
-          <a
+          <!-- <a
             href="/sap/s4hana"
             class="inline-flex items-center gap-2 text-secondary font-medium hover:gap-3 transition-all duration-300"
           >
             Explorar SAP S/4HANA
             <LucideArrowRight class="w-5 h-5" />
-          </a>
+          </a> -->
         </div>
 
         <!-- Imagen/Visual del producto -->
@@ -254,12 +258,12 @@ import {
             </li>
           </ul>
 
-          <a
+          <!-- <a
             href="/sap/successfactors"
             class="inline-flex items-center gap-2 text-text font-medium hover:gap-3 transition-all duration-300"
           >
             Descubrir SAP ECC My ERP <LucideArrowRight class="w-5 h-5" />
-          </a>
+          </a> -->
         </div>
       </div>
     </div>
@@ -273,7 +277,9 @@ import {
         Nuestros consultores pueden ayudarte a encontrar la opción perfecta.
       </p>
       <a
-        href="#contacto"
+        href={message}
+        rel="noopener noreferrer"
+        target="_blank"
         class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-primary/20 group"
       >
         Solicitar asesoría personalizada
