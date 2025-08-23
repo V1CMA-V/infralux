@@ -8,20 +8,139 @@ import '@fontsource/poppins'
 interface Props {
   title: string
   description: string
+  keywords?: string
+  image?: string
+  type?: string
+  canonicalURL?: URL | string
 }
 
-const { title, description } = Astro.props
+const {
+  title,
+  description,
+  keywords = 'SAP, consultoria SAP, implementación SAP, soporte SAP, ERP, Business One, S/4HANA, consultor certificado SAP, optimización procesos empresariales',
+  image = '/favicon.svg',
+  type = 'website',
+  canonicalURL = new URL(Astro.url.pathname, Astro.site),
+} = Astro.props
+
+const siteName = 'INFRALUX - Consultoria y Servicios SAP'
+const fullTitle = title.includes('INFRALUX') ? title : `${title} | INFRALUX`
+const imageUrl = new URL(image, Astro.site)
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.json" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+
+    <!-- Primary Meta Tags -->
+    <title>{fullTitle}</title>
+    <meta name="title" content={fullTitle} />
     <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="INFRALUX" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={fullTitle} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={imageUrl} />
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#1e40af" />
+    <meta name="msapplication-TileColor" content="#1e40af" />
+    <meta name="language" content="Spanish" />
+    <meta name="geo.region" content="MX" />
+    <meta name="geo.placename" content="México" />
+
+    <!-- Verificación de motores de búsqueda (completar con códigos reales) -->
+    <!-- <meta name="google-site-verification" content="TU_CODIGO_GOOGLE" /> -->
+    <!-- <meta name="msvalidate.01" content="TU_CODIGO_BING" /> -->
+
+    <!-- Google Analytics (completar con ID real) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script> -->
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "INFRALUX",
+        "description": "Empresa especializada en consultoría, implementación y soporte de sistemas SAP. Más de 15 años de experiencia ayudando a empresas a optimizar sus procesos de negocio.",
+        "url": "https://infralux.com",
+        "logo": "https://infralux.com/favicon.svg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "areaServed": "MX",
+          "availableLanguage": "Spanish"
+        },
+        "sameAs": [
+          "https://linkedin.com/company/infralux",
+          "https://facebook.com/infralux"
+        ],
+        "areaServed": {
+          "@type": "Country",
+          "name": "México"
+        },
+        "serviceArea": {
+          "@type": "Country",
+          "name": "México"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios SAP",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Consultoría SAP",
+                "description": "Estrategias personalizadas para optimización de procesos empresariales con SAP"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Implementación SAP",
+                "description": "Implementación completa de sistemas SAP Business One y S/4HANA"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Soporte y Mantenimiento SAP",
+                "description": "Soporte técnico 24/7 y mantenimiento de sistemas SAP"
+              }
+            }
+          ]
+        }
+      }
+    </script>
   </head>
   <body>
     <Header />

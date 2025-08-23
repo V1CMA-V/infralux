@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://infralux.com/sitemap.xml
+
+# Crawl-delay para ser respetuosos con los recursos del servidor
+Crawl-delay: 1
+
+# Bloquear archivos innecesarios para SEO
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /*.map$

@@ -1,0 +1,22 @@
+{
+  "name": "INFRALUX - Consultoria SAP México",
+  "short_name": "INFRALUX",
+  "description": "Especialistas en SAP con +15 años de experiencia. Implementación, consultoría y soporte de SAP Business One y S/4HANA.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e40af",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "lang": "es",
+  "scope": "/",
+  "screenshots": []
+}

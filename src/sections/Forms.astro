@@ -18,24 +18,26 @@ import {
 
 <section
   id="contacto"
-  class="py-20 px-4 md:px-8 lg:px-16 relative overflow-hidden animate-fade-in-up"
+  class="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-16 relative overflow-hidden animate-fade-in-up"
 >
-  <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
+  <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 sm:gap-10 lg:gap-12">
     <!-- Formulario de contacto -->
-    <div class="contact-form-container col-span-3">
+    <div class="contact-form-container col-span-1 lg:col-span-3">
       <div
-        class="bg-background-cards p-8 rounded-xl shadow-lg border border-secondary/10 h-full"
+        class="bg-background-cards p-4 sm:p-6 md:p-8 rounded-xl shadow-lg border border-secondary/10 h-full pb-10"
       >
-        <h3 class="text-2xl font-semibold mb-6 flex items-center gap-2">
-          <LucideMail class="w-6 h-6 text-primary" />
+        <h3
+          class="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 flex items-center gap-2"
+        >
+          <LucideMail class="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
           <span>Envíanos un mensaje</span>
         </h3>
 
         <form
           id="contactForm"
-          class="space-y-6 grid grid-cols-2 gap-4 h-full py-12"
+          class="space-y-4 sm:space-y-6 grid grid-cols-1 sm:grid-cols-2 gap-4 h-full py-4 sm:py-8 md:py-12"
         >
-          <div class="form-group">
+          <div class="form-group col-span-1">
             <label
               for="nombre"
               class="block text-sm font-medium text-secondary mb-1"
@@ -45,12 +47,12 @@ import {
               type="text"
               id="nombre"
               name="nombre"
-              class="w-full bg-background border border-secondary/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
+              class="w-full bg-background border border-secondary/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-base"
               placeholder="Tu nombre"
               required
             />
           </div>
-          <div class="form-group">
+          <div class="form-group col-span-1">
             <label
               for="empresa"
               class="block text-sm font-medium text-secondary mb-1"
@@ -60,13 +62,13 @@ import {
               type="text"
               id="empresa"
               name="empresa"
-              class="w-full bg-background border border-secondary/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
+              class="w-full bg-background border border-secondary/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-base"
               placeholder="Nombre de tu empresa"
               required
             />
           </div>
 
-          <div class="form-group">
+          <div class="form-group col-span-1">
             <label
               for="email"
               class="block text-sm font-medium text-secondary mb-1"
@@ -76,13 +78,13 @@ import {
               type="email"
               id="email"
               name="email"
-              class="w-full bg-background border border-secondary/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
+              class="w-full bg-background border border-secondary/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-base"
               placeholder="tu@email.com"
               required
             />
           </div>
 
-          <div class="form-group">
+          <div class="form-group col-span-1">
             <label
               for="telefono"
               class="block text-sm font-medium text-secondary mb-1"
@@ -92,13 +94,13 @@ import {
               type="tel"
               id="telefono"
               name="telefono"
-              class="w-full bg-background border border-secondary/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
+              class="w-full bg-background border border-secondary/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-base"
               placeholder="Tu número de teléfono"
               required
             />
           </div>
 
-          <div class="form-group col-span-2">
+          <div class="form-group col-span-1 sm:col-span-2">
             <label
               for="servicio"
               class="block text-sm font-medium text-secondary mb-1"
@@ -107,7 +109,7 @@ import {
             <select
               id="servicio"
               name="servicio"
-              class="w-full bg-background border border-secondary/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
+              class="w-full bg-background border border-secondary/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-base"
             >
               <option value="">Selecciona un servicio</option>
               <option value="implementacion">Implementación SAP</option>
@@ -118,7 +120,7 @@ import {
             </select>
           </div>
 
-          <div class="form-group col-span-2">
+          <div class="form-group col-span-1 sm:col-span-2">
             <label
               for="mensaje"
               class="block text-sm font-medium text-secondary mb-1"
@@ -128,15 +130,17 @@ import {
               id="mensaje"
               name="mensaje"
               rows="4"
-              class="w-full bg-background border border-secondary/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
+              class="w-full bg-background border border-secondary/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-base resize-none"
               placeholder="Cuéntanos sobre tu proyecto o necesidades"
               required></textarea>
           </div>
 
-          <div class="form-submit col-span-2 items-center justify-center flex">
+          <div
+            class="form-submit col-span-1 sm:col-span-2 items-center justify-center flex"
+          >
             <button
               type="submit"
-              class="w-fit cursor-pointer bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg flex items-center justify-center gap-2"
+              class="w-full sm:w-fit cursor-pointer bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg flex items-center justify-center gap-2 min-h-[48px]"
             >
               <LucideSend class="w-5 h-5" />
               Enviar mensaje
@@ -147,68 +151,82 @@ import {
     </div>
 
     <!-- Información de contacto -->
-    <div class="contact-info-container space-y-8 col-span-2">
+    <div
+      class="contact-info-container space-y-6 sm:space-y-8 col-span-1 lg:col-span-2"
+    >
       <!-- Tarjeta de información principal -->
       <div
-        class="bg-background-cards p-8 rounded-xl shadow-lg border border-secondary/10"
+        class="bg-background-cards p-4 sm:p-6 md:p-8 rounded-xl shadow-lg border border-secondary/10"
       >
-        <h3 class="text-2xl font-semibold mb-6 flex items-center gap-2">
-          <LucideInfo class="w-6 h-6 text-primary" />
+        <h3
+          class="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 flex items-center gap-2"
+        >
+          <LucideInfo class="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
           <span>Información de contacto</span>
         </h3>
 
-        <div class="space-y-6">
-          <div class="flex items-start gap-4">
-            <div class="bg-primary/10 p-3 rounded-full">
-              <LucideMapPin class="w-6 h-6 text-primary" />
+        <div class="space-y-4 sm:space-y-6">
+          <div class="flex items-start gap-3 sm:gap-4">
+            <div class="bg-primary/10 p-2 sm:p-3 rounded-full flex-shrink-0">
+              <LucideMapPin class="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
             </div>
             <div>
-              <h4 class="font-medium text-lg">Dirección</h4>
-              <p class="text-secondary">Oficina Sonata Coworking Puebla Pue.</p>
+              <h4 class="font-medium text-base sm:text-lg">Dirección</h4>
+              <p class="text-secondary text-sm sm:text-base">
+                Oficina Sonata Coworking Puebla Pue.
+              </p>
             </div>
           </div>
 
-          <div class="flex items-start gap-4">
-            <div class="bg-primary/10 p-3 rounded-full">
-              <LucidePhone class="w-6 h-6 text-primary" />
+          <div class="flex items-start gap-3 sm:gap-4">
+            <div class="bg-primary/10 p-2 sm:p-3 rounded-full flex-shrink-0">
+              <LucidePhone class="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
             </div>
             <div>
-              <h4 class="font-medium text-lg">Teléfono</h4>
-              <p class="text-secondary">(+52) 2211310407</p>
+              <h4 class="font-medium text-base sm:text-lg">Teléfono</h4>
+              <p class="text-secondary text-sm sm:text-base">
+                (+52) 2211310407
+              </p>
             </div>
           </div>
 
-          <div class="flex items-start gap-4">
-            <div class="bg-primary/10 p-3 rounded-full">
-              <LucideMail class="w-6 h-6 text-primary" />
+          <div class="flex items-start gap-3 sm:gap-4">
+            <div class="bg-primary/10 p-2 sm:p-3 rounded-full flex-shrink-0">
+              <LucideMail class="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
             </div>
             <div>
-              <h4 class="font-medium text-lg">Correo electrónico</h4>
-              <p class="text-secondary">contacto@infraluxap.com.mx</p>
+              <h4 class="font-medium text-base sm:text-lg">
+                Correo electrónico
+              </h4>
+              <p class="text-secondary text-sm sm:text-base">
+                contacto@infraluxap.com.mx
+              </p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="grid gap-8 sm:grid-cols-2">
+      <div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2">
         <!-- Horario de atención -->
         <div
-          class="bg-background-cards p-8 rounded-xl shadow-lg border border-secondary/10"
+          class="bg-background-cards p-4 sm:p-6 md:p-8 rounded-xl shadow-lg border border-secondary/10"
         >
-          <h3 class="text-xl font-semibold mb-6 flex items-center gap-2">
-            <LucideClock class="w-5 h-5 text-primary" />
+          <h3
+            class="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 flex items-center gap-2"
+          >
+            <LucideClock class="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
             <span>Horario de atención</span>
           </h3>
 
           <ul class="space-y-3" aria-label="Horario de atención">
             <li
-              class="flex flex-col items-center justify-center text-sm md:text-base"
+              class="flex flex-col items-center justify-center text-sm sm:text-base"
             >
               <span class="text-secondary">Lunes – Viernes</span>
               <span class="font-medium text-text">9:00 AM – 6:00 PM</span>
             </li>
             <li
-              class="flex flex-col items-center justify-center text-sm md:text-base"
+              class="flex flex-col items-center justify-center text-sm sm:text-base"
             >
               <span class="text-secondary">Sabados y Domingos</span>
               <span class="font-medium text-text">Cerrado</span>
@@ -218,10 +236,12 @@ import {
 
         <!-- Por Qué Elegirnos -->
         <div
-          class="bg-background-cards p-8 rounded-xl shadow-lg border border-secondary/10"
+          class="bg-background-cards p-4 sm:p-6 md:p-8 rounded-xl shadow-lg border border-secondary/10"
         >
-          <h3 class="text-xl font-semibold mb-6 flex items-center gap-2">
-            <LucideCheckCircle class="w-5 h-5 text-primary" />
+          <h3
+            class="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 flex items-center gap-2"
+          >
+            <LucideCheckCircle class="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
             <span>¿Por Qué Elegirnos?</span>
           </h3>
 
@@ -234,7 +254,7 @@ import {
                 'Metodología probada',
                 'Soporte post-implementación',
               ].map((text) => (
-                <li class="flex items-start gap-2 text-sm md:text-base">
+                <li class="flex items-start gap-2 text-sm sm:text-base">
                   <LucideCheckCircle
                     class="w-4 h-4 text-green-700 mt-0.5 flex-shrink-0"
                     aria-hidden="true"
@@ -247,65 +267,71 @@ import {
         </div>
       </div>
 
-      <div class="flex w-full items-center justify-center gap-8">
+      <div
+        class="flex flex-col sm:flex-row w-full items-center justify-center gap-4 sm:gap-6 lg:gap-8"
+      >
         <!-- Redes sociales -->
         <div
-          class="bg-background-cards p-8 rounded-xl shadow-lg border border-secondary/10 flex-1"
+          class="bg-background-cards p-4 sm:p-6 md:p-8 rounded-xl shadow-lg border border-secondary/10 flex-1 w-full"
         >
-          <h3 class="text-xl font-semibold mb-4 flex items-center gap-2">
-            <LucideShare2 class="w-5 h-5 text-primary" />
+          <h3
+            class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 flex items-center gap-2"
+          >
+            <LucideShare2 class="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
             <span>Síguenos</span>
           </h3>
 
-          <div class="flex gap-4">
+          <div class="flex gap-3 sm:gap-4 justify-center sm:justify-start">
             <a
               href="#"
-              class="bg-background p-3 rounded-full hover:bg-primary/10 transition-all duration-300"
+              class="bg-background p-2 sm:p-3 rounded-full hover:bg-primary/10 transition-all duration-300"
             >
-              <LucideFacebook class="w-6 h-6 text-primary" />
+              <LucideFacebook class="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
             </a>
             <a
               href="#"
-              class="bg-background p-3 rounded-full hover:bg-primary/10 transition-all duration-300"
+              class="bg-background p-2 sm:p-3 rounded-full hover:bg-primary/10 transition-all duration-300"
             >
-              <LucideTwitter class="w-6 h-6 text-primary" />
+              <LucideTwitter class="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
             </a>
             <a
               href="#"
-              class="bg-background p-3 rounded-full hover:bg-primary/10 transition-all duration-300"
+              class="bg-background p-2 sm:p-3 rounded-full hover:bg-primary/10 transition-all duration-300"
             >
-              <LucideLinkedin class="w-6 h-6 text-primary" />
+              <LucideLinkedin class="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
             </a>
             <a
               href="#"
-              class="bg-background p-3 rounded-full hover:bg-primary/10 transition-all duration-300"
+              class="bg-background p-2 sm:p-3 rounded-full hover:bg-primary/10 transition-all duration-300"
             >
-              <LucideInstagram class="w-6 h-6 text-primary" />
+              <LucideInstagram class="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
             </a>
           </div>
         </div>
 
         <!-- Consulta Emergecia -->
         <div
-          class="bg-background-cards p-8 rounded-xl shadow-lg border border-secondary/10 flex-1"
+          class="bg-background-cards p-4 sm:p-6 md:p-8 rounded-xl shadow-lg border border-secondary/10 flex-1 w-full"
         >
-          <h3 class="text-xl font-semibold mb-4 flex items-center gap-2">
-            <LucidePhone class="w-5 h-5 text-primary" />
+          <h3
+            class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 flex items-center gap-2"
+          >
+            <LucidePhone class="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
             <span>Consulta Emergencia</span>
           </h3>
 
-          <div class="flex gap-4">
+          <div class="flex gap-3 sm:gap-4 justify-center sm:justify-start">
             <a
               href="#"
-              class="bg-background p-3 rounded-full hover:bg-primary/10 transition-all duration-300"
+              class="bg-background p-2 sm:p-3 rounded-full hover:bg-primary/10 transition-all duration-300"
             >
-              <LucidePhone class="w-6 h-6 text-primary" />
+              <LucidePhone class="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
             </a>
             <a
               href="#"
-              class="bg-background p-3 rounded-full hover:bg-green-500/10 transition-all duration-300"
+              class="bg-background p-2 sm:p-3 rounded-full hover:bg-green-500/10 transition-all duration-300"
             >
-              <Whatsapp className="w-6 h-6 text-green-500" />
+              <Whatsapp className="w-5 h-5 sm:w-6 sm:h-6 text-green-500" />
             </a>
           </div>
         </div>
@@ -314,9 +340,9 @@ import {
   </div>
 
   <!-- Mapa -->
-  <div class="mt-16">
+  <div class="mt-12 sm:mt-16">
     <div
-      class="bg-background-cards p-4 rounded-xl shadow-lg border border-secondary/10 overflow-hidden w-3/4 mx-auto"
+      class="bg-background-cards p-3 sm:p-4 rounded-xl shadow-lg border border-secondary/10 overflow-hidden w-full sm:w-11/12 md:w-3/4 mx-auto"
     >
       <div class="aspect-video w-full rounded-lg overflow-hidden">
         <iframe

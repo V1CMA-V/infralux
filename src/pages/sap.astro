@@ -1,14 +1,22 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import CTA from "@/sections/CTA.astro";
-import Hero from "@/sections/Hero.astro";
-import ProductsSap from "@/sections/ProductsSap.astro";
-import QueEs from "@/sections/QueEs.astro";
-import UtilizarSap from "@/sections/UtilizarSap.astro";
-import VentajasSap from "@/sections/VentajasSap.astro";
+import Breadcrumbs from '@/components/Breadcrumbs.astro'
+import Layout from '@/layouts/Layout.astro'
+import CTA from '@/sections/CTA.astro'
+import Hero from '@/sections/Hero.astro'
+import ProductsSap from '@/sections/ProductsSap.astro'
+import QueEs from '@/sections/QueEs.astro'
+import UtilizarSap from '@/sections/UtilizarSap.astro'
+import VentajasSap from '@/sections/VentajasSap.astro'
 ---
 
-<Layout title="¿Qué es SAP?" description="¿Qué es SAP?">
+<Layout
+  title="¿Qué es SAP? Guía Completa 2025 | Business One vs S/4HANA"
+  description="Descubre qué es SAP, sus ventajas y productos principales. Comparativa Business One vs S/4HANA vs ECC. Guía completa para elegir la mejor solución ERP para tu empresa."
+  keywords="qué es SAP, SAP Business One, SAP S/4HANA, SAP ECC, ERP empresarial, software de gestión, planificación recursos empresariales, comparativa SAP"
+>
+  <div class="container mx-auto px-4 pt-8">
+    <Breadcrumbs items={[{ name: '¿Qué es SAP?', url: '/sap' }]} />
+  </div>
   <Hero title="¿Qué es SAP?">
     SAP es el líder mundial en software empresarial, ayudando a empresas de
     todos los tamaños a operar de manera más eficiente y rentable.

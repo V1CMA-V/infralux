@@ -1,4 +1,5 @@
 ---
+import Breadcrumbs from '@/components/Breadcrumbs.astro'
 import Layout from '@/layouts/Layout.astro'
 import Caracteristicas from '@/sections/Caracteristicas.astro'
 import Certifications from '@/sections/Certifications.astro'
@@ -7,7 +8,14 @@ import Historia from '@/sections/Historia.astro'
 import Why from '@/sections/Why.astro'
 ---
 
-<Layout title="Nosotros" description="Somos una empresa especializada en SAP">
+<Layout
+  title="Sobre INFRALUX | +15 Años Especializados en SAP México"
+  description="Conoce INFRALUX: empresa líder en consultoría SAP México con +15 años de experiencia, +50 proyectos exitosos, consultores certificados y metodología probada en implementaciones ERP."
+  keywords="sobre INFRALUX, empresa SAP México, consultores certificados SAP, experiencia SAP, historia empresa, equipo SAP especializado, certificaciones SAP"
+>
+  <div class="container mx-auto px-4 pt-8">
+    <Breadcrumbs items={[{ name: 'Sobre Nosotros', url: '/sobre-nosotros' }]} />
+  </div>
   <Hero title="Sobre INFRALUX">
     Somos especialistas en soluciones SAP con más de una década de experiencia
     ayudando a empresas a transformar sus procesos de negocio.

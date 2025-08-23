@@ -6,50 +6,57 @@ const message = whatsDefaultMessage()
 ---
 
 <section
-  class="h-screen w-full bg-gradient-to-b from-primary via-primary/40 to-background"
+  class="min-h-screen w-full bg-gradient-to-b from-primary via-primary/40 to-background pt-16 md:pt-28"
 >
   <div
-    class="flex items-center justify-center gap-8 h-full w-full max-w-[1300px] mx-auto animate-blurred-fade-in"
+    class="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-8 h-full w-full max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-0 animate-blurred-fade-in"
   >
     <article
-      class="z-10 w-full max-w-6xl mx-auto pl-16 flex flex-col gap-6 flex-1"
+      class="z-10 w-full max-w-6xl mx-auto px-4 sm:px-8 lg:pl-16 flex flex-col gap-4 sm:gap-6 flex-1 text-center lg:text-left"
     >
-      <h1 class="md:text-6xl text-2xl font-bold text-white">
+      <h1
+        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight"
+      >
         Transforma su negocio con <strong>SAP</strong>
       </h1>
-      <p class="md:text-xl text-lg text-pretty text-white">
+      <p
+        class="text-base sm:text-lg md:text-xl text-pretty text-white/95 max-w-2xl mx-auto lg:mx-0"
+      >
         Somos especialistas en <strong
           >implementación, soporte y consultoría SAP</strong
         >. Ayudamos a empresas a <strong>optimizar sus procesos</strong> y
         <strong>alcanzar la excelencia operacional</strong>.
       </p>
 
-      <div class="flex items-center gap-4">
+      <div
+        class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mt-2 sm:mt-4"
+      >
         <a
           id="cta"
           href={message}
           target="_blank"
           rel="noopener noreferrer"
-          class="flex items-center gap-2 px-6 py-2 text-md rounded-xl bg-primary/80 hover:bg-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-white hover:scale-105 group"
-          ><Phone class="w-6 h-6 group-hover:rotate-6 transition-transform" /> Solicitar
-          asesoría gratuita</a
+          class="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 text-sm sm:text-md rounded-xl bg-primary/80 hover:bg-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-white hover:scale-105 group min-h-[48px]"
+          ><Phone
+            class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-6 transition-transform"
+          /> Solicitar asesoría gratuita</a
         >
         <a
-          id="cta"
+          id="cta-secondary"
           href="/servicios"
-          class="px-6 py-2 text-md rounded-xl border border-primary text-primary hover:bg-primary/20 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:scale-105 group"
+          class="w-full sm:w-auto px-6 py-3 text-sm sm:text-md rounded-xl border border-primary text-primary hover:bg-primary/20 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:scale-105 group min-h-[48px] flex items-center justify-center"
           >Ver Servicios</a
         >
       </div>
     </article>
 
     <div
-      class="w-full h-3/4 flex-1 flex items-center justify-center rounded-2xl overflow-hidden bg-background-cards group"
+      class="w-full max-w-lg lg:max-w-none h-64 sm:h-80 lg:h-3/4 flex-1 flex items-center justify-center rounded-2xl overflow-hidden bg-background-cards group order-first lg:order-last"
     >
       <img
         src="https://inforges.es/wp-content/uploads/2024/03/que-es-sap-soluciones-sap-que-transforman-los-negocios.jpg"
-        alt=""
-        class="w-auto h-full object-cover object-center scale-110 group-hover:scale-105 transition-all duration-300"
+        alt="Soluciones SAP que transforman los negocios"
+        class="w-full h-full object-cover object-center scale-110 group-hover:scale-105 transition-all duration-300"
       />
     </div>
   </div>

@@ -1,11 +1,19 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import FAQ from "@/sections/FAQ.astro";
-import Forms from "@/sections/Forms.astro";
-import Hero from "@/sections/Hero.astro";
+import Breadcrumbs from '@/components/Breadcrumbs.astro'
+import Layout from '@/layouts/Layout.astro'
+import FAQ from '@/sections/FAQ.astro'
+import Forms from '@/sections/Forms.astro'
+import Hero from '@/sections/Hero.astro'
 ---
 
-<Layout title="Contacto" description="Contacto">
+<Layout
+  title="Contacto INFRALUX | Consulta Gratuita SAP México"
+  description="Contáctanos para una consulta gratuita sobre SAP. Respuesta en menos de 24h. Consultores certificados listos para transformar tu empresa con soluciones ERP personalizadas."
+  keywords="contacto SAP México, consulta gratuita SAP, cotización ERP, consultores SAP certificados, asesoría SAP gratuita, contactar especialistas SAP"
+>
+  <div class="container mx-auto px-4 pt-8">
+    <Breadcrumbs items={[{ name: 'Contacto', url: '/contacto' }]} />
+  </div>
   <Hero title="Contáctanos">
     ¿Listo para transformar su negocio con SAP? Nuestros expertos están aquí
     para ayudarle. Solicite una consulta gratuita y descubra cómo podemos

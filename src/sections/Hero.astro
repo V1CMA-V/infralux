@@ -1,66 +1,66 @@
 ---
 interface Props {
-  title: string;
+  title: string
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props
 ---
 
 <section
-  class="relative overflow-hidden h-[70vh] w-full flex flex-col items-center justify-center gap-6"
+  class="relative overflow-hidden h-[50vh] sm:h-[60vh] md:h-[70vh] w-full flex flex-col items-center justify-center gap-4 sm:gap-6 px-4 sm:px-6 md:px-8 mt-16"
 >
   <h1
-    class="text-5xl md:text-6xl font-extrabold tracking-widest text-center leading-tight drop-shadow-xl"
+    class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-wide sm:tracking-widest text-center leading-tight drop-shadow-xl"
   >
     {title}
   </h1>
 
   <p
-    class="text-lg md:text-xl font-thin text-text/90 text-balance text-center w-1/2 mx-auto"
+    class="text-base sm:text-lg md:text-xl font-thin text-text/90 text-balance text-center w-full sm:w-3/4 md:w-2/3 lg:w-1/2 mx-auto max-w-4xl"
   >
     <slot />
   </p>
 </section>
 
 <script>
-  import gsap from "gsap";
-  import { SplitText } from "gsap/SplitText";
-  gsap.registerPlugin(SplitText);
+  import gsap from 'gsap'
+  import { SplitText } from 'gsap/SplitText'
+  gsap.registerPlugin(SplitText)
 
-  const h1 = document.querySelector("h1");
-  const p = document.querySelector("p");
+  // Verificar si es dispositivo móvil para ajustar animaciones
+  const isMobile = window.innerWidth < 768
 
-  const splitText = new SplitText(h1, {
-    type: "words",
-    wordsClass: "word",
-  });
+  const h1 = document.querySelector('h1')
+  const p = document.querySelector('p')
 
-  const splitText2 = new SplitText(p, {
-    type: "words",
-    wordsClass: "word",
-  });
+  if (h1 && p) {
+    const splitText = new SplitText(h1, {
+      type: 'words',
+      wordsClass: 'word',
+    })
 
-  gsap.from(splitText.words, {
-    duration: 1,
-    y: 50,
-    opacity: 0,
-    ease: "power3.out",
-    stagger: 0.02,
-  });
+    const splitText2 = new SplitText(p, {
+      type: 'words',
+      wordsClass: 'word',
+    })
 
-  gsap.from(splitText2.words, {
-    duration: 1,
-    y: 50,
-    opacity: 0,
-    ease: "power3.out",
-    stagger: 0.02,
-  });
+    // Animación del título con configuración responsiva
+    gsap.from(splitText.words, {
+      duration: isMobile ? 0.8 : 1,
+      y: isMobile ? 30 : 50,
+      opacity: 0,
+      ease: 'power3.out',
+      stagger: isMobile ? 0.03 : 0.02,
+    })
 
-  // subtle floating animation for background blob
-  gsap.to("#hero-blob", {
-    duration: 40,
-    rotate: 360,
-    ease: "none",
-    repeat: -1,
-  });
+    // Animación del párrafo con delay para móviles
+    gsap.from(splitText2.words, {
+      duration: isMobile ? 0.8 : 1,
+      y: isMobile ? 20 : 50,
+      opacity: 0,
+      ease: 'power3.out',
+      stagger: isMobile ? 0.02 : 0.02,
+      delay: isMobile ? 0.3 : 0.2,
+    })
+  }
 </script>
