@@ -18,7 +18,7 @@ const {
   title,
   description,
   keywords = 'SAP, consultoria SAP, implementación SAP, soporte SAP, ERP, Business One, S/4HANA, consultor certificado SAP, optimización procesos empresariales',
-  image = '/favicon.svg',
+  image = '/logo.webp',
   type = 'website',
   canonicalURL = new URL(Astro.url.pathname, Astro.site),
 } = Astro.props
@@ -33,7 +33,7 @@ const imageUrl = new URL(image, Astro.site)
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/logo.webp" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="generator" content={Astro.generator} />
 
@@ -90,7 +90,7 @@ const imageUrl = new URL(image, Astro.site)
         "name": "INFRALUX",
         "description": "Empresa especializada en consultoría, implementación y soporte de sistemas SAP. Más de 15 años de experiencia ayudando a empresas a optimizar sus procesos de negocio.",
         "url": "https://infralux.com",
-        "logo": "https://infralux.com/favicon.svg",
+        "logo": "https://infralux.com/logo.webp",
         "contactPoint": {
           "@type": "ContactPoint",
           "contactType": "customer service",
